@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4602AFD3161E3AA1003C9EAC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4602AFD2161E3AA1003C9EAC /* Cocoa.framework */; };
+		4602AFDD161E3AA1003C9EAC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4602AFDB161E3AA1003C9EAC /* InfoPlist.strings */; };
+		4602B00E161E3AB3003C9EAC /* Assembler.h in Headers */ = {isa = PBXBuildFile; fileRef = 4602AFE7161E3AB3003C9EAC /* Assembler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4602B00F161E3AB3003C9EAC /* Assembler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4602AFE8161E3AB3003C9EAC /* Assembler.m */; };
+		4602B010161E3AB3003C9EAC /* Binary.h in Headers */ = {isa = PBXBuildFile; fileRef = 4602AFE9161E3AB3003C9EAC /* Binary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4602B011161E3AB3003C9EAC /* Binary.m in Sources */ = {isa = PBXBuildFile; fileRef = 4602AFEA161E3AB3003C9EAC /* Binary.m */; };
+		4602B012161E3AB3003C9EAC /* Command.h in Headers */ = {isa = PBXBuildFile; fileRef = 4602AFEB161E3AB3003C9EAC /* Command.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4602B013161E3AB3003C9EAC /* Command.m in Sources */ = {isa = PBXBuildFile; fileRef = 4602AFEC161E3AB3003C9EAC /* Command.m */; };
+		4602B018161E3AB3003C9EAC /* Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 4602AFF1161E3AB3003C9EAC /* Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4602B019161E3AB3003C9EAC /* Header.m in Sources */ = {isa = PBXBuildFile; fileRef = 4602AFF2161E3AB3003C9EAC /* Header.m */; };
+		4602B01C161E3AB3003C9EAC /* MachO.h in Headers */ = {isa = PBXBuildFile; fileRef = 4602AFF5161E3AB3003C9EAC /* MachO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4602B01D161E3AB3003C9EAC /* MachO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4602AFF6161E3AB3003C9EAC /* MachO.m */; };
+		4602B01E161E3AB3003C9EAC /* MachO+Symbol.h in Headers */ = {isa = PBXBuildFile; fileRef = 4602AFF7161E3AB3003C9EAC /* MachO+Symbol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4602B01F161E3AB3003C9EAC /* MachO+Symbol.m in Sources */ = {isa = PBXBuildFile; fileRef = 4602AFF8161E3AB3003C9EAC /* MachO+Symbol.m */; };
+		4602B021161E3AB3003C9EAC /* NSData+Util.h in Headers */ = {isa = PBXBuildFile; fileRef = 4602AFFA161E3AB3003C9EAC /* NSData+Util.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4602B022161E3AB3003C9EAC /* NSData+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 4602AFFB161E3AB3003C9EAC /* NSData+Util.m */; };
+		4602B023161E3AB3003C9EAC /* ObjcCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 4602AFFC161E3AB3003C9EAC /* ObjcCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4602B024161E3AB3003C9EAC /* ObjcCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4602AFFD161E3AB3003C9EAC /* ObjcCategory.m */; };
+		4602B025161E3AB3003C9EAC /* ObjcClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 4602AFFE161E3AB3003C9EAC /* ObjcClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4602B026161E3AB3003C9EAC /* ObjcClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4602AFFF161E3AB3003C9EAC /* ObjcClass.m */; };
+		4602B027161E3AB3003C9EAC /* ObjcMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 4602B000161E3AB3003C9EAC /* ObjcMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4602B028161E3AB3003C9EAC /* ObjcMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 4602B001161E3AB3003C9EAC /* ObjcMethod.m */; };
+		4602B029161E3AB3003C9EAC /* ObjcModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 4602B002161E3AB3003C9EAC /* ObjcModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4602B02A161E3AB3003C9EAC /* ObjcModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 4602B003161E3AB3003C9EAC /* ObjcModule.m */; };
+		4602B02B161E3AB3003C9EAC /* ObjcStructs.h in Headers */ = {isa = PBXBuildFile; fileRef = 4602B004161E3AB3003C9EAC /* ObjcStructs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4602B02C161E3AB3003C9EAC /* ObjcSymtab.h in Headers */ = {isa = PBXBuildFile; fileRef = 4602B005161E3AB3003C9EAC /* ObjcSymtab.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4602B02D161E3AB3003C9EAC /* ObjcSymtab.m in Sources */ = {isa = PBXBuildFile; fileRef = 4602B006161E3AB3003C9EAC /* ObjcSymtab.m */; };
+		4602B02E161E3AB3003C9EAC /* Patcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 4602B007161E3AB3003C9EAC /* Patcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4602B02F161E3AB3003C9EAC /* Patcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4602B008161E3AB3003C9EAC /* Patcher.m */; };
+		4602B030161E3AB3003C9EAC /* SegmentCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 4602B009161E3AB3003C9EAC /* SegmentCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4602B031161E3AB3003C9EAC /* SegmentCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 4602B00A161E3AB3003C9EAC /* SegmentCommand.m */; };
+		4602B033161E3AB3003C9EAC /* SymtabCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 4602B00C161E3AB3003C9EAC /* SymtabCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4602B034161E3AB3003C9EAC /* SymtabCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 4602B00D161E3AB3003C9EAC /* SymtabCommand.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4602AFCF161E3AA1003C9EAC /* Krush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Krush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4602AFD2161E3AA1003C9EAC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		4602AFD5161E3AA1003C9EAC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		4602AFD6161E3AA1003C9EAC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4602AFD7161E3AA1003C9EAC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4602AFDA161E3AA1003C9EAC /* Krush-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Krush-Info.plist"; sourceTree = "<group>"; };
+		4602AFDC161E3AA1003C9EAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4602AFDE161E3AA1003C9EAC /* Krush-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Krush-Prefix.pch"; sourceTree = "<group>"; };
+		4602AFE7161E3AB3003C9EAC /* Assembler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assembler.h; sourceTree = "<group>"; };
+		4602AFE8161E3AB3003C9EAC /* Assembler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Assembler.m; sourceTree = "<group>"; };
+		4602AFE9161E3AB3003C9EAC /* Binary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Binary.h; sourceTree = "<group>"; };
+		4602AFEA161E3AB3003C9EAC /* Binary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Binary.m; sourceTree = "<group>"; };
+		4602AFEB161E3AB3003C9EAC /* Command.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Command.h; sourceTree = "<group>"; };
+		4602AFEC161E3AB3003C9EAC /* Command.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Command.m; sourceTree = "<group>"; };
+		4602AFF1161E3AB3003C9EAC /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		4602AFF2161E3AB3003C9EAC /* Header.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Header.m; sourceTree = "<group>"; };
+		4602AFF5161E3AB3003C9EAC /* MachO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MachO.h; sourceTree = "<group>"; };
+		4602AFF6161E3AB3003C9EAC /* MachO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MachO.m; sourceTree = "<group>"; };
+		4602AFF7161E3AB3003C9EAC /* MachO+Symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MachO+Symbol.h"; sourceTree = "<group>"; };
+		4602AFF8161E3AB3003C9EAC /* MachO+Symbol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MachO+Symbol.m"; sourceTree = "<group>"; };
+		4602AFFA161E3AB3003C9EAC /* NSData+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Util.h"; sourceTree = "<group>"; };
+		4602AFFB161E3AB3003C9EAC /* NSData+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Util.m"; sourceTree = "<group>"; };
+		4602AFFC161E3AB3003C9EAC /* ObjcCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjcCategory.h; sourceTree = "<group>"; };
+		4602AFFD161E3AB3003C9EAC /* ObjcCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcCategory.m; sourceTree = "<group>"; };
+		4602AFFE161E3AB3003C9EAC /* ObjcClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjcClass.h; sourceTree = "<group>"; };
+		4602AFFF161E3AB3003C9EAC /* ObjcClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcClass.m; sourceTree = "<group>"; };
+		4602B000161E3AB3003C9EAC /* ObjcMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjcMethod.h; sourceTree = "<group>"; };
+		4602B001161E3AB3003C9EAC /* ObjcMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcMethod.m; sourceTree = "<group>"; };
+		4602B002161E3AB3003C9EAC /* ObjcModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjcModule.h; sourceTree = "<group>"; };
+		4602B003161E3AB3003C9EAC /* ObjcModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcModule.m; sourceTree = "<group>"; };
+		4602B004161E3AB3003C9EAC /* ObjcStructs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjcStructs.h; sourceTree = "<group>"; };
+		4602B005161E3AB3003C9EAC /* ObjcSymtab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjcSymtab.h; sourceTree = "<group>"; };
+		4602B006161E3AB3003C9EAC /* ObjcSymtab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcSymtab.m; sourceTree = "<group>"; };
+		4602B007161E3AB3003C9EAC /* Patcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patcher.h; sourceTree = "<group>"; };
+		4602B008161E3AB3003C9EAC /* Patcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patcher.m; sourceTree = "<group>"; };
+		4602B009161E3AB3003C9EAC /* SegmentCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentCommand.h; sourceTree = "<group>"; };
+		4602B00A161E3AB3003C9EAC /* SegmentCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentCommand.m; sourceTree = "<group>"; };
+		4602B00C161E3AB3003C9EAC /* SymtabCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymtabCommand.h; sourceTree = "<group>"; };
+		4602B00D161E3AB3003C9EAC /* SymtabCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SymtabCommand.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4602AFCB161E3AA1003C9EAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4602AFD3161E3AA1003C9EAC /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4602AFC3161E3AA1003C9EAC = {
+			isa = PBXGroup;
+			children = (
+				4602AFD8161E3AA1003C9EAC /* Krush */,
+				4602AFD1161E3AA1003C9EAC /* Frameworks */,
+				4602AFD0161E3AA1003C9EAC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4602AFD0161E3AA1003C9EAC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4602AFCF161E3AA1003C9EAC /* Krush.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4602AFD1161E3AA1003C9EAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4602AFD2161E3AA1003C9EAC /* Cocoa.framework */,
+				4602AFD4161E3AA1003C9EAC /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4602AFD4161E3AA1003C9EAC /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4602AFD5161E3AA1003C9EAC /* AppKit.framework */,
+				4602AFD6161E3AA1003C9EAC /* CoreData.framework */,
+				4602AFD7161E3AA1003C9EAC /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		4602AFD8161E3AA1003C9EAC /* Krush */ = {
+			isa = PBXGroup;
+			children = (
+				4602B03E161E3B2B003C9EAC /* MachO */,
+				4602B03A161E3AF2003C9EAC /* Utilities */,
+				4602AFD9161E3AA1003C9EAC /* Supporting Files */,
+			);
+			path = Krush;
+			sourceTree = "<group>";
+		};
+		4602AFD9161E3AA1003C9EAC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4602AFDA161E3AA1003C9EAC /* Krush-Info.plist */,
+				4602AFDB161E3AA1003C9EAC /* InfoPlist.strings */,
+				4602AFDE161E3AA1003C9EAC /* Krush-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4602B035161E3ABD003C9EAC /* Patcher */ = {
+			isa = PBXGroup;
+			children = (
+				4602AFE7161E3AB3003C9EAC /* Assembler.h */,
+				4602AFE8161E3AB3003C9EAC /* Assembler.m */,
+				4602B007161E3AB3003C9EAC /* Patcher.h */,
+				4602B008161E3AB3003C9EAC /* Patcher.m */,
+			);
+			name = Patcher;
+			sourceTree = "<group>";
+		};
+		4602B03A161E3AF2003C9EAC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4602AFFA161E3AB3003C9EAC /* NSData+Util.h */,
+				4602AFFB161E3AB3003C9EAC /* NSData+Util.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		4602B03B161E3B03003C9EAC /* ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				4602B004161E3AB3003C9EAC /* ObjcStructs.h */,
+				4602B002161E3AB3003C9EAC /* ObjcModule.h */,
+				4602B003161E3AB3003C9EAC /* ObjcModule.m */,
+				4602B005161E3AB3003C9EAC /* ObjcSymtab.h */,
+				4602B006161E3AB3003C9EAC /* ObjcSymtab.m */,
+				4602AFFE161E3AB3003C9EAC /* ObjcClass.h */,
+				4602AFFF161E3AB3003C9EAC /* ObjcClass.m */,
+				4602AFFC161E3AB3003C9EAC /* ObjcCategory.h */,
+				4602AFFD161E3AB3003C9EAC /* ObjcCategory.m */,
+				4602B000161E3AB3003C9EAC /* ObjcMethod.h */,
+				4602B001161E3AB3003C9EAC /* ObjcMethod.m */,
+			);
+			name = ObjC;
+			sourceTree = "<group>";
+		};
+		4602B03C161E3B12003C9EAC /* Symbols */ = {
+			isa = PBXGroup;
+			children = (
+				4602AFF7161E3AB3003C9EAC /* MachO+Symbol.h */,
+				4602AFF8161E3AB3003C9EAC /* MachO+Symbol.m */,
+			);
+			name = Symbols;
+			sourceTree = "<group>";
+		};
+		4602B03D161E3B20003C9EAC /* Load Commands */ = {
+			isa = PBXGroup;
+			children = (
+				4602AFF1161E3AB3003C9EAC /* Header.h */,
+				4602AFF2161E3AB3003C9EAC /* Header.m */,
+				4602AFEB161E3AB3003C9EAC /* Command.h */,
+				4602AFEC161E3AB3003C9EAC /* Command.m */,
+				4602B009161E3AB3003C9EAC /* SegmentCommand.h */,
+				4602B00A161E3AB3003C9EAC /* SegmentCommand.m */,
+				4602B00C161E3AB3003C9EAC /* SymtabCommand.h */,
+				4602B00D161E3AB3003C9EAC /* SymtabCommand.m */,
+			);
+			name = "Load Commands";
+			sourceTree = "<group>";
+		};
+		4602B03E161E3B2B003C9EAC /* MachO */ = {
+			isa = PBXGroup;
+			children = (
+				4602B03D161E3B20003C9EAC /* Load Commands */,
+				4602B03C161E3B12003C9EAC /* Symbols */,
+				4602B03B161E3B03003C9EAC /* ObjC */,
+				4602B035161E3ABD003C9EAC /* Patcher */,
+				4602AFF5161E3AB3003C9EAC /* MachO.h */,
+				4602AFF6161E3AB3003C9EAC /* MachO.m */,
+				4602AFE9161E3AB3003C9EAC /* Binary.h */,
+				4602AFEA161E3AB3003C9EAC /* Binary.m */,
+			);
+			name = MachO;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4602AFCC161E3AA1003C9EAC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4602B00E161E3AB3003C9EAC /* Assembler.h in Headers */,
+				4602B010161E3AB3003C9EAC /* Binary.h in Headers */,
+				4602B012161E3AB3003C9EAC /* Command.h in Headers */,
+				4602B018161E3AB3003C9EAC /* Header.h in Headers */,
+				4602B01C161E3AB3003C9EAC /* MachO.h in Headers */,
+				4602B01E161E3AB3003C9EAC /* MachO+Symbol.h in Headers */,
+				4602B021161E3AB3003C9EAC /* NSData+Util.h in Headers */,
+				4602B023161E3AB3003C9EAC /* ObjcCategory.h in Headers */,
+				4602B025161E3AB3003C9EAC /* ObjcClass.h in Headers */,
+				4602B027161E3AB3003C9EAC /* ObjcMethod.h in Headers */,
+				4602B029161E3AB3003C9EAC /* ObjcModule.h in Headers */,
+				4602B02B161E3AB3003C9EAC /* ObjcStructs.h in Headers */,
+				4602B02C161E3AB3003C9EAC /* ObjcSymtab.h in Headers */,
+				4602B02E161E3AB3003C9EAC /* Patcher.h in Headers */,
+				4602B030161E3AB3003C9EAC /* SegmentCommand.h in Headers */,
+				4602B033161E3AB3003C9EAC /* SymtabCommand.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4602AFCE161E3AA1003C9EAC /* Krush */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4602AFE4161E3AA1003C9EAC /* Build configuration list for PBXNativeTarget "Krush" */;
+			buildPhases = (
+				4602AFCA161E3AA1003C9EAC /* Sources */,
+				4602AFCB161E3AA1003C9EAC /* Frameworks */,
+				4602AFCC161E3AA1003C9EAC /* Headers */,
+				4602AFCD161E3AA1003C9EAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Krush;
+			productName = Krush;
+			productReference = 4602AFCF161E3AA1003C9EAC /* Krush.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4602AFC5161E3AA1003C9EAC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = 4602AFC8161E3AA1003C9EAC /* Build configuration list for PBXProject "Krush" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4602AFC3161E3AA1003C9EAC;
+			productRefGroup = 4602AFD0161E3AA1003C9EAC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4602AFCE161E3AA1003C9EAC /* Krush */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4602AFCD161E3AA1003C9EAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4602AFDD161E3AA1003C9EAC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4602AFCA161E3AA1003C9EAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4602B00F161E3AB3003C9EAC /* Assembler.m in Sources */,
+				4602B011161E3AB3003C9EAC /* Binary.m in Sources */,
+				4602B013161E3AB3003C9EAC /* Command.m in Sources */,
+				4602B019161E3AB3003C9EAC /* Header.m in Sources */,
+				4602B01D161E3AB3003C9EAC /* MachO.m in Sources */,
+				4602B01F161E3AB3003C9EAC /* MachO+Symbol.m in Sources */,
+				4602B022161E3AB3003C9EAC /* NSData+Util.m in Sources */,
+				4602B024161E3AB3003C9EAC /* ObjcCategory.m in Sources */,
+				4602B026161E3AB3003C9EAC /* ObjcClass.m in Sources */,
+				4602B028161E3AB3003C9EAC /* ObjcMethod.m in Sources */,
+				4602B02A161E3AB3003C9EAC /* ObjcModule.m in Sources */,
+				4602B02D161E3AB3003C9EAC /* ObjcSymtab.m in Sources */,
+				4602B02F161E3AB3003C9EAC /* Patcher.m in Sources */,
+				4602B031161E3AB3003C9EAC /* SegmentCommand.m in Sources */,
+				4602B034161E3AB3003C9EAC /* SymtabCommand.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4602AFDB161E3AA1003C9EAC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4602AFDC161E3AA1003C9EAC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4602AFE2161E3AA1003C9EAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4602AFE3161E3AA1003C9EAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4602AFE5161E3AA1003C9EAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Krush/Krush-Prefix.pch";
+				INFOPLIST_FILE = "Krush/Krush-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		4602AFE6161E3AA1003C9EAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Krush/Krush-Prefix.pch";
+				INFOPLIST_FILE = "Krush/Krush-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4602AFC8161E3AA1003C9EAC /* Build configuration list for PBXProject "Krush" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4602AFE2161E3AA1003C9EAC /* Debug */,
+				4602AFE3161E3AA1003C9EAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4602AFE4161E3AA1003C9EAC /* Build configuration list for PBXNativeTarget "Krush" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4602AFE5161E3AA1003C9EAC /* Debug */,
+				4602AFE6161E3AA1003C9EAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4602AFC5161E3AA1003C9EAC /* Project object */;
+}

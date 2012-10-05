@@ -208,9 +208,11 @@
 
 -(NSString *)description
 {
-    NSMutableString *desc = [[NSString stringWithFormat:@"Location: %d\nArch: %d\n", location, arch] mutableCopy];
+    NSMutableString *desc = [[NSString stringWithFormat:@"Location: %d\n", location] mutableCopy];
     if (arch == CPU_TYPE_I386)
     {
+        [desc appendString:@"Arch: i386\n"];
+        
         for (SegmentCommand *seg in [self segments])
         {
             [desc appendFormat:@"%@\n", seg];
@@ -218,6 +220,8 @@
     }
     else if (arch == CPU_TYPE_X86_64)
     {
+        [desc appendString:@"Arch: x86_64\n"];
+        
         for (SegmentCommand64 *seg in [self segments])
         {
             [desc appendFormat:@"%@\n", seg];

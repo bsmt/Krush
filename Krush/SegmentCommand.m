@@ -82,8 +82,8 @@
     NSMutableString *desc = [NSMutableString string];
     for (Section *sec in [self sections])
     {
-        [desc appendString:[NSString stringWithFormat:@"section32: %@,%@\nOffset: %d\n",
-                            [sec segmentName], [sec sectionName], [sec offset]]];
+        [desc appendString:[NSString stringWithFormat:@"section: %@,%@\n",
+                            [sec segmentName], [sec sectionName]]];
     }
     return [NSString stringWithString:desc];
 }
@@ -203,8 +203,8 @@
     NSMutableString *desc = [NSMutableString string];
     for (Section64 *sec in [self sections])
     {
-        [desc appendString:[NSString stringWithFormat:@"section64: %@,%@\nOffset: %d\n",
-                            [sec segmentName], [sec sectionName], [sec offset]]];
+        [desc appendString:[NSString stringWithFormat:@"section: %@,%@\n",
+                            [sec segmentName], [sec sectionName]]];
     }
     return [NSString stringWithString:desc];
 }

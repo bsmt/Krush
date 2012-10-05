@@ -1,0 +1,3 @@
+[submodule "GHUnit"]
+	path = GHUnit
+	url = https://github.com/gabriel/gh-unit.git

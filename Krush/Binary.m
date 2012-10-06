@@ -34,7 +34,7 @@
         return;
     }
     
-    unsigned int magic = [binary intDataInRange:NSMakeRange(0, 4)];
+    unsigned int magic = (unsigned int)[binary intDataInRange:NSMakeRange(0, 4)];
     
     if (magic == FAT_MAGIC) // fat binary
     {

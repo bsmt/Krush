@@ -43,7 +43,7 @@
 @property uint8_t type;
 @property uint8_t sect;
 @property uint16_t desc;
-@property uint64_t value;
+@property unsigned long value;
 
 -(nlist64 *)initWithStruct:(struct nlist_64)nl;
 

@@ -11,10 +11,10 @@
 
 @interface ObjcSymtab : NSObject
 
-@property unsigned int selector_ref_count;
-@property unsigned int references;
-@property unsigned int class_def_count;
-@property unsigned int catagory_def_count;
+@property unsigned long selector_ref_count;
+@property unsigned long references;
+@property unsigned long class_def_count;
+@property unsigned long catagory_def_count;
 @property NSArray *definitions; // locations of class/cat info
 
 +(ObjcSymtab *)symtabFromStruct:(struct objc_symtab)symtab definitions:(NSArray *)defs;

@@ -31,8 +31,8 @@
 -(Section *)section:(NSString *)sectName inSegment:(NSString *)segName;
 -(Section64 *)section64:(NSString *)sectName inSegment:(NSString *)segName;
 
--(unsigned int)convertVirtualOffset:(uint64_t)virtual;
--(unsigned int)convertRealOffset:(uint64_t)real;
+-(unsigned long)convertVirtualOffset:(unsigned long)virtual;
+-(unsigned long)convertRealOffset:(unsigned long)real;
 
 -(NSString *)description;
 

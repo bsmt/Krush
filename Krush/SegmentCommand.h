@@ -58,8 +58,8 @@
 
 @property NSString *sectionName;
 @property NSString *segmentName;
-@property uint64_t address;
-@property uint64_t size;
+@property unsigned long address;
+@property unsigned long size;
 @property uint32_t offset;
 @property uint32_t align;
 @property uint32_t relocationOffset;
@@ -81,10 +81,10 @@
 @property uint32_t command;
 @property uint32_t size;
 @property NSString *segmentName;
-@property uint64_t vmaddr;
-@property uint64_t vmsize;
-@property uint64_t fileoff;
-@property uint64_t filesize;
+@property unsigned long vmaddr;
+@property unsigned long vmsize;
+@property unsigned long fileoff;
+@property unsigned long filesize;
 @property vm_prot_t maxprot;
 @property vm_prot_t initprot;
 @property uint32_t nsects;

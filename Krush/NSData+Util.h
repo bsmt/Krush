@@ -8,7 +8,7 @@
 
 @interface NSData (Conversion)
 
--(unsigned int)toInt;
+-(unsigned long)toInt;
 
 -(NSString *)hexadecimalString;
 
@@ -25,10 +25,10 @@
 -(char *)toCharWithLength:(int)len;
 
 // Equivalent of [[self subDataWithRange:range] toInt];
--(unsigned int)intDataInRange:(NSRange)range;
+-(unsigned long)intDataInRange:(NSRange)range;
 
 // Same as intDataInRange but swaps endian.
--(unsigned int)littleEndianIntDataInRange:(NSRange)range;
+-(unsigned long)littleEndianIntDataInRange:(NSRange)range;
 
 // Equivalent of [[self subDataWithRange:range] toString];
 -(NSString *)stringDataInRange:(NSRange)range;
@@ -37,6 +37,6 @@
 -(NSData *)swapEndian;
 
 // Returns the data it finds before a null byte starting at off.
--(NSData *)readTillNullAtOffset:(unsigned int)off;
+-(NSData *)readTillNullAtOffset:(unsigned long)off;
 
 @end

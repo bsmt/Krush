@@ -8,13 +8,9 @@
 
 @implementation NSData (Util)
 
-// [self description] data into an unsigned int, sanely
--(uint64_t)toInt
+-(unsigned long)toInt
 {
-    unsigned int data;
-    NSScanner *scan = [NSScanner scannerWithString:[self hexadecimalString]];
-    [scan scanHexInt:&data];
-    return (uint64_t)data;
+    return *(unsigned long *)[[self swapEndian] bytes];
 }
 
 -(NSString *)hexadecimalString
@@ -71,12 +67,12 @@
 }
 
 
--(unsigned int)intDataInRange:(NSRange)range
+-(unsigned long)intDataInRange:(NSRange)range
 {
     return [[self subdataWithRange:range] toInt];
 }
 
--(uint64_t)littleEndianIntDataInRange:(NSRange)range
+-(unsigned long)littleEndianIntDataInRange:(NSRange)range
 {
     return [[[self subdataWithRange:range] swapEndian] toInt];
 }
@@ -98,9 +94,9 @@
     return [NSData dataWithData:data];
 }
 
--(NSData *)readTillNullAtOffset:(unsigned int)off
+-(NSData *)readTillNullAtOffset:(unsigned long)off
 {
-    unsigned int offset = off;
+    unsigned long offset = off;
     NSMutableData *buffer = [NSMutableData data];
     
     for (int i = 0; (off + (1 * i)) < ([self length] - 1); i++)

@@ -41,14 +41,14 @@
             continue;
         }
 
-        unsigned int symtab_location = [mach convertVirtualOffset:mod.symtab];  // all we care about
+        unsigned long symtab_location = [mach convertVirtualOffset:mod.symtab];  // all we care about
         struct objc_symtab *sym = (struct objc_symtab *)((char *)[[mach data] bytes] + symtab_location);
         NSMutableArray *defs = [NSMutableArray array];
         
         // read definitions
         if ((sym->class_def_count + sym->catagory_def_count) > 0)
         {
-            unsigned int def_offset = symtab_location + sizeof(struct objc_symtab);
+            unsigned long def_offset = symtab_location + sizeof(struct objc_symtab);
             int i = 0;
             while (i < (sym->class_def_count + sym->catagory_def_count))
             {
@@ -57,8 +57,8 @@
                     break;
                 }
                  
-                unsigned int def = [[mach data] littleEndianIntDataInRange:NSMakeRange(def_offset, 4)];
-                [defs addObject:[NSNumber numberWithInt:def]];
+                unsigned long def = [[mach data] littleEndianIntDataInRange:NSMakeRange(def_offset, 4)];
+                [defs addObject:[NSNumber numberWithUnsignedLong:def]];
                 i++;
                 def_offset += 4;
             }

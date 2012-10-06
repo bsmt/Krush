@@ -108,11 +108,11 @@
     return 0;
 }
 
--(unsigned int)convertVirtualOffset:(uint64_t)virtual
+-(unsigned long)convertVirtualOffset:(unsigned long)virtual
 {
-    unsigned int base = location;
-    unsigned int section_offset;
-    unsigned int vmaddr;
+    unsigned long base = location;
+    unsigned long section_offset;
+    unsigned long vmaddr;
 
     if (arch == CPU_TYPE_I386)
     {
@@ -130,7 +130,7 @@
         vmaddr = [sect address];
         section_offset = [sect offset];
         
-        return (unsigned int)(base + section_offset + virtual - vmaddr);
+        return (unsigned long)(base + section_offset + virtual - vmaddr);
     }
     else if (arch == CPU_TYPE_X86_64)
     {
@@ -145,10 +145,10 @@
             return 0;
         }
         
-        vmaddr = (unsigned int)[sect address];
+        vmaddr = (unsigned long)[sect address];
         section_offset = [sect offset];
         
-        return (unsigned int)(base + section_offset + virtual - vmaddr);
+        return (unsigned long)(base + section_offset + virtual - vmaddr);
     }
     else
     {
@@ -157,11 +157,11 @@
     
 }
 
--(unsigned int)convertRealOffset:(uint64_t)real
+-(unsigned long)convertRealOffset:(unsigned long)real
 {
-    unsigned int base = location;
-    unsigned int section_offset;
-    unsigned int vmaddr;
+    unsigned long base = location;
+    unsigned long section_offset;
+    unsigned long vmaddr;
     
     if (arch == CPU_TYPE_I386)
     {
@@ -179,7 +179,7 @@
         vmaddr = [sect address];
         section_offset = [sect offset];
         
-        return (unsigned int)(real - base - section_offset + vmaddr);
+        return (unsigned long)(real - base - section_offset + vmaddr);
     }
     else if (arch == CPU_TYPE_X86_64)
     {
@@ -194,10 +194,10 @@
             return 0;
         }
         
-        vmaddr = (unsigned int)[sect address];
+        vmaddr = (unsigned long)[sect address];
         section_offset = [sect offset];
         
-        return (unsigned int)(real - base - section_offset + vmaddr);
+        return (unsigned long)(real - base - section_offset + vmaddr);
     }
     else
     {

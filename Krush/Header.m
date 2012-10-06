@@ -54,7 +54,7 @@
 
 +(Header *)headerInData:(NSData *)data atOffset:(unsigned int)off
 {
-    uint32_t magic = [data intDataInRange:NSMakeRange(off, 4)];
+    uint32_t magic = (uint32_t)[data intDataInRange:NSMakeRange(off, 4)];
     
     if (magic == MH_CIGAM)
     {

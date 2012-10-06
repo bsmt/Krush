@@ -11,10 +11,10 @@
 
 @interface ObjcModule : NSObject
 
-@property unsigned int version;
-@property unsigned int size;
-@property unsigned int name;
-@property unsigned int symtab;
+@property unsigned long version;
+@property unsigned long size;
+@property unsigned long name;
+@property unsigned long symtab;
 
 +(ObjcModule *)moduleFromStruct:(struct objc_module)mod_struct;
 +(NSArray *)modulesInMachO:(MachO *)mach;

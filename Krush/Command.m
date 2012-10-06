@@ -21,8 +21,8 @@
         }
         
         unsigned int start = offset;
-        uint32_t cmd = [binary littleEndianIntDataInRange:NSMakeRange(offset, 4)];
-        uint32_t size = [binary littleEndianIntDataInRange:NSMakeRange(offset + 4, 4)];
+        uint32_t cmd = (uint32_t)[binary littleEndianIntDataInRange:NSMakeRange(offset, 4)];
+        uint32_t size = (uint32_t)[binary littleEndianIntDataInRange:NSMakeRange(offset + 4, 4)];
     
         switch (cmd)
         {

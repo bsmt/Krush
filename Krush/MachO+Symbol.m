@@ -8,13 +8,13 @@
 
 @implementation MachO (Symbol)
 
--(unsigned int)virtualOffsetForSymbol:(NSString *)sym
+-(unsigned long)virtualOffsetForSymbol:(NSString *)sym
 {
     NSDictionary *symbols = [self findAllSymbols];
     return (unsigned int)symbols[sym];
 }
 
--(unsigned int)realOffsetForSymbol:(NSString *)sym
+-(unsigned long)realOffsetForSymbol:(NSString *)sym
 {
     return [self convertVirtualOffset:[self virtualOffsetForSymbol:sym]];
 }
@@ -118,34 +118,81 @@
 
 -(NSArray *)classes
 {
-    NSArray *modules = [ObjcModule modulesInMachO:self];
-    NSArray *symtabs = [ObjcSymtab symtabsFromModuleList:modules inMachO:self];
-    
-    NSMutableArray *classes = [NSMutableArray array];
-    
-    for (ObjcSymtab *symtab in symtabs)
+    if (self.arch == CPU_TYPE_I386)
     {
-        NSArray *temp_classes = [ObjcClass classesInMachO:self withSymtab:symtab];
-        [classes addObjectsFromArray:temp_classes];
-    }
+        NSArray *modules = [ObjcModule modulesInMachO:self];
+        NSArray *symtabs = [ObjcSymtab symtabsFromModuleList:modules inMachO:self];
     
-    return [NSArray arrayWithArray:classes];
+        NSMutableArray *classes = [NSMutableArray array];
+    
+        for (ObjcSymtab *symtab in symtabs)
+        {
+            NSArray *temp_classes = [ObjcClass classesInMachO:self withSymtab:symtab];
+            [classes addObjectsFromArray:temp_classes];
+        }
+    
+        return [NSArray arrayWithArray:classes];
+    }
+    else if (self.arch == CPU_TYPE_X86_64)
+    {
+        Section64 *class_list = [self section64:@"__objc_classlist" inSegment:@"__DATA"];
+        
+        NSMutableArray *classes = [NSMutableArray array];
+        
+        for (int i = 0; i < class_list.size; i += 8)
+        {
+            unsigned long pointer = [self.data littleEndianIntDataInRange:
+                                     NSMakeRange([self convertVirtualOffset:class_list.address] + i, 8)];
+            ObjcClass *class = [ObjcClass objc2ClassInMachO:self atVirtualOffset:pointer];
+            [classes addObject:class];
+        }
+        
+        return [NSArray arrayWithArray:classes];
+    }
+    else
+    {
+        return NULL;
+    }
 }
 
 -(NSArray *)categories
 {
-    NSArray *modules = [ObjcModule modulesInMachO:self];
-    NSArray *symtabs = [ObjcSymtab symtabsFromModuleList:modules inMachO:self];
-    
-    NSMutableArray *categories = [NSMutableArray array];
-    
-    for (ObjcSymtab *symtab in symtabs)
+    if (self.arch == CPU_TYPE_I386)
     {
-        NSArray *temp_cats = [ObjcCategory categoriesInMachO:self withSymtab:symtab];
-        [categories addObjectsFromArray:temp_cats];
+        NSArray *modules = [ObjcModule modulesInMachO:self];
+        NSArray *symtabs = [ObjcSymtab symtabsFromModuleList:modules inMachO:self];
+        
+        NSMutableArray *categories = [NSMutableArray array];
+        
+        for (ObjcSymtab *symtab in symtabs)
+        {
+            NSArray *temp_cats = [ObjcCategory categoriesInMachO:self withSymtab:symtab];
+            [categories addObjectsFromArray:temp_cats];
+        }
+        
+        return [NSArray arrayWithArray:categories];
     }
-    
-    return [NSArray arrayWithArray:categories];
+    else if (self.arch == CPU_TYPE_X86_64)
+    {
+        Section64 *cat_list = [self section64:@"__objc_catlist" inSegment:@"__DATA"];
+        
+        NSMutableArray *cats = [NSMutableArray array];
+        
+        for (int i = 0; i < cat_list.size; i += 8)
+        {
+            unsigned long pointer = [self.data littleEndianIntDataInRange:
+                                     NSMakeRange([self convertVirtualOffset:cat_list.address] + i, 8)];
+            ObjcCategory *category = [ObjcCategory objc2CategoryInMachO:self atVirtualOffset:pointer];
+            [cats addObject:category];
+        }
+        
+        return [NSArray arrayWithArray:cats];
+
+    }
+    else
+    {
+        return NULL;
+    }
 }
 
 @end

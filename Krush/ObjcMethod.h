@@ -21,9 +21,10 @@ enum method_type
 @property enum method_type type;
 @property NSString *name;
 @property NSString *types;
-@property unsigned int imp;
+@property unsigned long imp;
 
-+(NSArray *)methodsInMachO:(MachO *)mach atVirtualOffset:(unsigned int)offset type:(enum method_type)type; // offset = start of objc_method_list
-+(ObjcMethod *)methodFromStruct:(struct objc_method)method_struct inMachO:(MachO *)mach type:(enum method_type)type;
++(NSArray *)methodsInMachO:(MachO *)mach atVirtualOffset:(unsigned long)offset type:(enum method_type)type;
++(ObjcMethod *)methodFromStruct:(struct objc_method)method_struct inMachO:(MachO *)mach type:(enum method_type)type; // i386
++(ObjcMethod *)objc2MethodFromStruct:(struct objc64_method)method_struct inMachO:(MachO *)mach type:(enum method_type)type; // x86_64
 
 @end

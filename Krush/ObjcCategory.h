@@ -13,13 +13,14 @@
 
 @property NSString *category_name;
 @property NSString *class_name;
-@property unsigned int loc_instance_methods;
-@property unsigned int loc_class_methods;
-@property unsigned int protocols;
+@property unsigned long loc_instance_methods;
+@property unsigned long loc_class_methods;
+@property unsigned long protocols;
 @property NSArray *class_methods;
 @property NSArray *instance_methods;
 
 +(NSArray *)categoriesInMachO:(MachO *)mach withSymtab:(ObjcSymtab *)symtab;
-+(ObjcCategory *)categoryInMachO:(MachO *)mach atVirtualOffset:(unsigned int)offset;
++(ObjcCategory *)categoryInMachO:(MachO *)mach atVirtualOffset:(unsigned long)offset; // i386
++(ObjcCategory *)objc2CategoryInMachO:(MachO *)mach atVirtualOffset:(unsigned long)offset;
 
 @end

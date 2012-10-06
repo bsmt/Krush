@@ -105,9 +105,9 @@ struct objc64_class
     uint64_t cache;
     uint64_t vtable;
     uint64_t data; // points to class_ro_t
-    uint64_t reserved1;
+    /*uint64_t reserved1;
     uint64_t reserved2;
-    uint64_t reserved3;
+    uint64_t reserved3;*/
 };
 
 struct objc64_class_ro_t

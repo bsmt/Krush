@@ -12,19 +12,21 @@
 
 @interface ObjcClass : NSObject
 
-@property unsigned int _isa;
+@property unsigned long _isa;
 @property NSString *super_class;
 @property NSString *name;
-@property unsigned int version;
-@property unsigned int info;
-@property unsigned int instance_size;
-@property unsigned int instance_vars;
-@property unsigned int method_lists;
-@property unsigned int cache;
-@property unsigned int protocols;
+@property unsigned long version;
+@property unsigned long info;
+@property unsigned long instance_size;
+@property unsigned long instance_vars;
+@property unsigned long method_lists;
+@property unsigned long cache;
+@property unsigned long protocols;
 @property NSMutableArray *methods;
 
 +(NSArray *)classesInMachO:(MachO *)mach withSymtab:(ObjcSymtab *)symtab;
-+(ObjcClass *)classInMachO:(MachO *)mach atVirtualOffset:(unsigned int)offset;
++(ObjcClass *)classInMachO:(MachO *)mach atVirtualOffset:(unsigned long)offset; // i386
++(ObjcClass *)objc2ClassInMachO:(MachO *)mach atVirtualOffset:(unsigned long)offset; // x86_64
+
 
 @end

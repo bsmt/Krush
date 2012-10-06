@@ -9,11 +9,12 @@
 #import "ObjcSymtab.h"
 #import "ObjcClass.h"
 #import "ObjcCategory.h"
+#import "NSData+Util.h"
 
 @interface MachO (Symbol)
 
--(unsigned int)virtualOffsetForSymbol:(NSString *)sym;
--(unsigned int)realOffsetForSymbol:(NSString *)sym;
+-(unsigned long)virtualOffsetForSymbol:(NSString *)sym;
+-(unsigned long)realOffsetForSymbol:(NSString *)sym;
 
 -(NSDictionary *)findAllSymbols;
 -(NSArray *)classes;

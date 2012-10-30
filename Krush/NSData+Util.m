@@ -104,7 +104,7 @@
         NSData *temp = [self subdataWithRange:NSMakeRange(offset += 1, 1)];
         if (*(char *)[temp bytes] == '\0')
         {
-            [buffer appendData:temp];
+            //[buffer appendData:temp];
             break;
         }
         else

@@ -74,7 +74,6 @@
     for (ObjcClass *class in classes)
     {
         for (ObjcMethod *method in class.methods)
-            
         {
             if (method.type == INSTANCE_METHOD)
             {

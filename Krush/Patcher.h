@@ -8,6 +8,7 @@
 
 #import "Binary.h"
 #import "MachO.h"
+#import "MachO+Symbol.h"
 #import "Assembler.h"
 
 @interface Patcher : NSObject

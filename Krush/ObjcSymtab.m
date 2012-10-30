@@ -31,6 +31,7 @@
 
     if (mach.arch != CPU_TYPE_I386)
     {
+        // x86_64 objects don't use the module/symtab system
         return NULL;
     }
 

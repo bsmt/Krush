@@ -19,6 +19,9 @@
 
 -(BOOL)patchSymbol:(NSString *)symbolName withReturnValue:(unsigned int)ret
 {
+    NSError *error = NULL;
+    NSFileHandle *handle = [NSFileHandle fileHandleForWritingToURL:[binary path] error:&error];
+
     for (MachO *mach in [[self binary] machs])
     {
         NSDictionary *symbols = [mach findAllSymbols];
@@ -29,17 +32,14 @@
         }
         else
         {
-            NSError *error = NULL;
-            NSFileHandle *handle = [NSFileHandle fileHandleForWritingToURL:[binary path] error:&error];
-            
             unsigned long symbol_offset = [mach convertVirtualOffset:[symbols[symbolName] unsignedLongValue]];
-            
             NSData *opcode = [Assembler opcodeForRetValue:ret arch:mach.arch];
             [handle seekToFileOffset:symbol_offset];
             [handle writeData:opcode];
         }
     }
     
+    [handle closeFile];
     return TRUE; // just going to assume things worked
 }
 
@@ -59,6 +59,7 @@
         [handle seekToFileOffset:dataRange.location];
         [handle writeData:replace];
         
+        [handle closeFile];
         return TRUE;
     }
 }

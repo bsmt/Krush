@@ -42,7 +42,7 @@
 		4602B034161E3AB3003C9EAC /* SymtabCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 4602B00D161E3AB3003C9EAC /* SymtabCommand.m */; };
 		46716C68161E9371005E60E8 /* Krush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4602AFCF161E3AA1003C9EAC /* Krush.framework */; };
 		4699B556163F391E00DE2608 /* test1 in Resources */ = {isa = PBXBuildFile; fileRef = 4699B555163F391E00DE2608 /* test1 */; };
-		4699B55B163F399900DE2608 /* BinaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4699B55A163F399900DE2608 /* BinaryTests.m */; };
+		4699B55B163F399900DE2608 /* SymbolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4699B55A163F399900DE2608 /* SymbolTests.m */; };
 		46C5EBE5161E746900064436 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4602AFD2161E3AA1003C9EAC /* Cocoa.framework */; };
 		46C5EBEB161E746900064436 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46C5EBE9161E746900064436 /* InfoPlist.strings */; };
 		46C5EBFD161E74A800064436 /* GHUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C5EBFC161E74A800064436 /* GHUnit.framework */; };
@@ -114,8 +114,8 @@
 		4602B00C161E3AB3003C9EAC /* SymtabCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymtabCommand.h; sourceTree = "<group>"; };
 		4602B00D161E3AB3003C9EAC /* SymtabCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SymtabCommand.m; sourceTree = "<group>"; };
 		4699B555163F391E00DE2608 /* test1 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = test1; sourceTree = "<group>"; };
-		4699B559163F399900DE2608 /* BinaryTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryTests.h; sourceTree = "<group>"; };
-		4699B55A163F399900DE2608 /* BinaryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinaryTests.m; sourceTree = "<group>"; };
+		4699B559163F399900DE2608 /* SymbolTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymbolTests.h; sourceTree = "<group>"; };
+		4699B55A163F399900DE2608 /* SymbolTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SymbolTests.m; sourceTree = "<group>"; };
 		46C5EBE3161E746900064436 /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46C5EBE8161E746900064436 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		46C5EBEA161E746900064436 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -295,8 +295,8 @@
 			children = (
 				46C5EBE7161E746900064436 /* Supporting Files */,
 				4699B558163F392100DE2608 /* Test Binaries */,
-				4699B559163F399900DE2608 /* BinaryTests.h */,
-				4699B55A163F399900DE2608 /* BinaryTests.m */,
+				4699B559163F399900DE2608 /* SymbolTests.h */,
+				4699B55A163F399900DE2608 /* SymbolTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -452,7 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46C5EC15161E774000064436 /* GHUnitTestMain.m in Sources */,
-				4699B55B163F399900DE2608 /* BinaryTests.m in Sources */,
+				4699B55B163F399900DE2608 /* SymbolTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

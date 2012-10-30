@@ -10,7 +10,7 @@
 #import <Krush/MachO.h>
 #import <Krush/MachO+Symbol.h>
 
-@interface BinaryTests : GHTestCase
+@interface SymbolTests : GHTestCase
 
 @property Binary *bin;
 

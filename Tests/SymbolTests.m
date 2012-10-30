@@ -4,9 +4,9 @@
 //  Created by ████
 //
 
-#import "BinaryTests.h"
+#import "SymbolTests.h"
 
-@implementation BinaryTests
+@implementation SymbolTests
 
 -(void)setUp
 {
@@ -24,7 +24,7 @@
 
             // class method
             unsigned long anClass = [symbols[@"+[AClass anClass]"] unsignedLongValue];
-            unsigned long anClass_offset = 0x00001e4a;
+            unsigned long anClass_offset = 0x00001e4a; // these are the absolutely offsets taken from a disassembler
             // category class method
             unsigned long coolestString = [symbols[@"+[NSString (test) coolestString]"] unsignedLongValue];
             unsigned long coolestString_offset = 0x00001ea7;

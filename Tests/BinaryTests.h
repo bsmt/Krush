@@ -1,5 +1,5 @@
 //
-//  LogTests.h
+//  BinaryTests.h
 //
 //  Created by ████
 //
@@ -10,7 +10,7 @@
 #import <Krush/MachO.h>
 #import <Krush/MachO+Symbol.h>
 
-@interface LogTests : GHTestCase
+@interface BinaryTests : GHTestCase
 
 @property Binary *bin;
 

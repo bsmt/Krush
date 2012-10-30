@@ -102,15 +102,14 @@
     for (int i = 0; (off + (1 * i)) < ([self length] - 1); i++)
     {
         NSData *temp = [self subdataWithRange:NSMakeRange(offset += 1, 1)];
-        if (*(char *)[temp bytes] == '\0')
+        if (*(char *)[temp bytes] != '\0')
         {
-            //[buffer appendData:temp];
-            break;
+            // add the byte if it isn't a null
+            [buffer appendData:temp];
         }
         else
         {
-            [buffer appendData:temp];
-            continue;
+            break;
         }
     }
     

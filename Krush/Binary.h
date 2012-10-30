@@ -14,9 +14,8 @@
 
 /** Main class for abstracting binaries.
  
- It contains one or more MachO objects, held in the machs array that represent the different objects (one for each arch)
-contained in the binary.
-*/
+ It contains one or more MachO objects that contain code for each architecture supported by the binary.
+ */
 
 @interface Binary : NSObject
 
@@ -29,8 +28,18 @@ contained in the binary.
 /// Array containing MachO objects, one for each architecture.
 @property NSMutableArray *machs;
 
+/// @name Initialization
+
+/** Make a new Binary object from one at the given path.
+ 
+ @param path Path to the target binary. Can contain tildes.
+ @return Initialized Binary object that has been parsed for all MachO information.
+ */
 -(id)initWithBinaryAtPath:(NSString *)path;
 
+/// @name Actions
+
+/// Gather all required information from the Mach Objects inside the binary.
 -(void)parseBinary;
 
 @end

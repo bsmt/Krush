@@ -18,7 +18,7 @@
 
     if (self)
     {
-        path = [NSURL fileURLWithPath:binPath];
+        path = [NSURL fileURLWithPath:[binPath stringByExpandingTildeInPath]];
         binary = [NSData dataWithContentsOfURL:path];
         machs = [NSMutableArray array];
         [self parseBinary];

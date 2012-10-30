@@ -28,26 +28,30 @@
  */
 +(Patcher *)patcherWithBinary:(Binary *)bin;
 
+
 /// @name Patching
 
 /** Patch a symbol with a return statement in the Binary's MachOs.
  
  @param symbolName The symbol to patch. For example you may want to patch a function called -[Object canDoStuff].
+ @return The patch status. TRUE = success, FALSE = failure.
  */
--(void)patchSymbol:(NSString *)symbolName withReturnValue:(unsigned int)ret;
+-(BOOL)patchSymbol:(NSString *)symbolName withReturnValue:(unsigned int)ret;
 
 /** Replace all occurances of the given search data.
  
  @param search The data to search for.
  @param replace The data that will replace it.
+ @return The patch status. TRUE = success, FALSE = failure.
  */
--(void)replaceData:(NSData *)search with:(NSData *)replace;
+-(BOOL)replaceData:(NSData *)search with:(NSData *)replace;
 
 /** Replace all occurances of the given search data with support for wildcards while searching.
  
  @param search The data to search for. To specify a wildcard, use the byte 0x2a (ASCII encoded *).
  @param replace The data that will replace any matches.
+ @return The patch status. TRUE = success, FALSE = failure.
  */
--(void)replaceData:(NSData *)search with:(NSData *)replace useWildcards:(BOOL)wildcard;
+-(BOOL)replaceData:(NSData *)search with:(NSData *)replace useWildcards:(BOOL)wildcard;
 
 @end

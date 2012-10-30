@@ -6,6 +6,8 @@
 
 #import "NSData+Util.h"
 
+#import <CommonCrypto/CommonDigest.h>
+
 @implementation NSData (Util)
 
 -(unsigned long)toInt
@@ -66,6 +68,11 @@
     return data;
 }
 
+-(NSString *)stringDataInRange:(NSRange)range
+{
+    return [[self subdataWithRange:range] toString];
+}
+
 
 -(unsigned long)intDataInRange:(NSRange)range
 {
@@ -77,10 +84,6 @@
     return [[[self subdataWithRange:range] swapEndian] toInt];
 }
 
--(NSString *)stringDataInRange:(NSRange)range
-{
-    return [[self subdataWithRange:range] toString];
-}
 
 -(NSData *)swapEndian
 {
@@ -93,6 +96,7 @@
     }
     return [NSData dataWithData:data];
 }
+
 
 -(NSData *)readTillNullAtOffset:(unsigned long)off
 {
@@ -114,6 +118,30 @@
     }
     
     return [NSData dataWithData:buffer];
+}
+
+
+-(NSData *)MD5Digest
+{
+    unsigned char result[CC_MD5_DIGEST_LENGTH];
+    
+    CC_MD5(self.bytes, (unsigned int)self.length, result);
+    return [[NSData alloc] initWithBytes:result length:CC_MD5_DIGEST_LENGTH];
+}
+
+-(NSString *)MD5HexDigest
+{
+    unsigned char result[CC_MD5_DIGEST_LENGTH];
+    
+    CC_MD5(self.bytes, (unsigned int)self.length, result);
+    NSMutableString *ret = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH*2];
+    
+    for (int i = 0; i<CC_MD5_DIGEST_LENGTH; i++)
+    {
+        [ret appendFormat:@"%02x",result[i]];
+    }
+    
+    return ret;
 }
 
 @end

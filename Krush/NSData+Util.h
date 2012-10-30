@@ -8,7 +8,7 @@
 
 /** A set of methods that help with reading NSData from bianry files.
  
- Common operations are converting to strings, swapping endian, reading strings, and checksuming.
+ Common operations are converting to strings, swapping endian, reading strings, and hashing.
  */
 
 @interface NSData (Conversion)
@@ -118,5 +118,21 @@
  @return The data found starting at off that ends with a NULL.
  */
 -(NSData *)readTillNullAtOffset:(unsigned long)off;
+
+
+/// @name Hashing
+
+/** Hashes the NSData as MD5.
+ 
+ MD5 utilities were taken from https://github.com/siuying/NSData-MD5
+ @return The md5sum of the data.
+ */
+-(NSData *)MD5Digest;
+
+/** Hex representation of the NSData's md5sum.
+ 
+ @return The md5sum of the data in a hex string.
+ */
+-(NSString *)MD5HexDigest;
 
 @end

@@ -19,3 +19,14 @@ Then, build and install GHUnit:
     cp -r build/Release/GHUnit.framework ../../Tests/
 
 Now you should be able to switch to the Tests target and run it.
+
+Generating Documentation
+------------------------
+
+Krush is documented with [appledoc](http://gentlebytes.com/appledoc/).
+
+If you want to generate documentation so that you can install it in Xcode, you'll need to get appledoc:
+
+    brew install appledoc
+
+Then, simply switch to the Documentation target in the Xcode project and build. It should install the documentation in Xcode and place the Docset and HTML versions in the KrushDocs folder on your Desktop.

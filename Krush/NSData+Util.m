@@ -103,7 +103,7 @@
     unsigned long offset = off;
     NSMutableData *buffer = [NSMutableData data];
     
-    for (int i = 0; (off + (1 * i)) < ([self length] - 1); i++)
+    for (int i = 0; (off + i) < ([self length] - 1); i++)
     {
         NSData *temp = [self subdataWithRange:NSMakeRange(offset += 1, 1)];
         if (*(char *)[temp bytes] != '\0')
@@ -142,6 +142,40 @@
     }
     
     return ret;
+}
+
+
+-(NSArray *)componentsSeparatedByByte:(Byte)sep;
+{
+	unsigned long len, index, last_sep_index;
+	NSData *line;
+	NSMutableArray *lines = nil;
+	
+	len = [self length];
+	Byte cData[len];
+	
+	[self getBytes:cData length:len];
+	
+	index = last_sep_index = 0;
+	
+	lines = [[NSMutableArray alloc] init];
+	
+	do
+    {
+		if (sep == cData[index])
+		{
+			NSRange startEndRange = NSMakeRange(last_sep_index, index - last_sep_index);
+			line = [self subdataWithRange:startEndRange];
+			
+			[lines addObject:line];
+			
+			last_sep_index = index + 1;
+			
+			continue;
+		}
+	} while (index++ < len);
+	
+	return lines;
 }
 
 @end

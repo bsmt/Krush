@@ -28,6 +28,7 @@
 /// Array containing MachO objects, one for each architecture.
 @property NSMutableArray *machs;
 
+
 /// @name Initialization
 
 /** Make a new Binary object from one at the given path.
@@ -36,6 +37,7 @@
  @return Initialized Binary object that has been parsed for all MachO information.
  */
 -(id)initWithBinaryAtPath:(NSString *)path;
+
 
 /// @name Actions
 

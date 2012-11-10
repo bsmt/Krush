@@ -48,6 +48,8 @@
 	
 	<option value="//api/name/MD5HexDigest">&nbsp;&nbsp;&nbsp;&nbsp;- MD5HexDigest</option>
 	
+	<option value="//api/name/componentsSeparatedByByte:">&nbsp;&nbsp;&nbsp;&nbsp;- componentsSeparatedByByte:</option>
+	
 	<option value="//api/name/hexadecimalString">&nbsp;&nbsp;&nbsp;&nbsp;- hexadecimalString</option>
 	
 	<option value="//api/name/intDataInRange:">&nbsp;&nbsp;&nbsp;&nbsp;- intDataInRange:</option>
@@ -98,6 +100,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Hashing">Hashing</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Splitting">Splitting</a></span></li>
+	
 </ul></li>
 
 
@@ -113,6 +117,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/MD5Digest">MD5Digest</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/MD5HexDigest">MD5HexDigest</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/componentsSeparatedByByte:">componentsSeparatedByByte:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hexadecimalString">hexadecimalString</a></span></li>
 	
@@ -322,6 +328,21 @@
 </li>
 						</ul>
 						
+						
+						<a title="Splitting" name="task_Splitting"></a>
+						<h3 class="subsubtitle task-title">Splitting</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/componentsSeparatedByByte:">&ndash;&nbsp;componentsSeparatedByByte:</a></code>
+		<span class="tooltip"><p>Splits the source data into any array of components separated by the specified byte.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
 					</div>
 					
 					
@@ -408,6 +429,62 @@
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSData+Util.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/componentsSeparatedByByte:" title="componentsSeparatedByByte:"></a>
+	<h3 class="subsubtitle method-title">componentsSeparatedByByte:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Splits the source data into any array of components separated by the specified byte.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSArray *)componentsSeparatedByByte:(Byte)<em>sep</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>sep</em></dt>
+			<dd><p>Byte to separate by.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>NSArray of components</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Taken from <a href="http://www.geektheory.ca/blog/splitting-nsdata-object-data-specific-byte/">http://www.geektheory.ca/blog/splitting-nsdata-object-data-specific-byte/</a></p>
+	</div>
 	
 	
 	

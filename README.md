@@ -2,6 +2,8 @@ Krush
 =====
 A framework that allows patching MachO binaries based on symbols and more.
 
+Most of Krush is documented, you can view the documentation at http://bsmt.github.com/Krush. It may not be completely up to date, though.
+
 Building requires Xcode 4.5 or newer.
 
 Unit Tests

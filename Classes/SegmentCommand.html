@@ -1,0 +1,646 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>SegmentCommand Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 840)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">Krush </a></h1>
+				<a id="developerHome" href="../index.html">bsmt</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">SegmentCommand Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/command">&nbsp;&nbsp;&nbsp;&nbsp;command</option>
+	
+	<option value="//api/name/fileoff">&nbsp;&nbsp;&nbsp;&nbsp;fileoff</option>
+	
+	<option value="//api/name/filesize">&nbsp;&nbsp;&nbsp;&nbsp;filesize</option>
+	
+	<option value="//api/name/flags">&nbsp;&nbsp;&nbsp;&nbsp;flags</option>
+	
+	<option value="//api/name/initprot">&nbsp;&nbsp;&nbsp;&nbsp;initprot</option>
+	
+	<option value="//api/name/location">&nbsp;&nbsp;&nbsp;&nbsp;location</option>
+	
+	<option value="//api/name/maxprot">&nbsp;&nbsp;&nbsp;&nbsp;maxprot</option>
+	
+	<option value="//api/name/nsects">&nbsp;&nbsp;&nbsp;&nbsp;nsects</option>
+	
+	<option value="//api/name/sections">&nbsp;&nbsp;&nbsp;&nbsp;sections</option>
+	
+	<option value="//api/name/segmentName">&nbsp;&nbsp;&nbsp;&nbsp;segmentName</option>
+	
+	<option value="//api/name/size">&nbsp;&nbsp;&nbsp;&nbsp;size</option>
+	
+	<option value="//api/name/vmaddr">&nbsp;&nbsp;&nbsp;&nbsp;vmaddr</option>
+	
+	<option value="//api/name/vmsize">&nbsp;&nbsp;&nbsp;&nbsp;vmsize</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/segmentCommandAtOffset:inData:">&nbsp;&nbsp;&nbsp;&nbsp;+ segmentCommandAtOffset:inData:</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/description">&nbsp;&nbsp;&nbsp;&nbsp;- description</option>
+	
+	<option value="//api/name/initWithStruct:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithStruct:</option>
+	
+	<option value="//api/name/sectionWithName:">&nbsp;&nbsp;&nbsp;&nbsp;- sectionWithName:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/command">command</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fileoff">fileoff</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/filesize">filesize</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/flags">flags</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initprot">initprot</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/location">location</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/maxprot">maxprot</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nsects">nsects</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sections">sections</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/segmentName">segmentName</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/size">size</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/vmaddr">vmaddr</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/vmsize">vmsize</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/segmentCommandAtOffset:inData:">segmentCommandAtOffset:inData:</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/description">description</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithStruct:">initWithStruct:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sectionWithName:">sectionWithName:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="SegmentCommand Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">SegmentCommand Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SegmentCommand.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/location">&nbsp;&nbsp;location</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sections">&nbsp;&nbsp;sections</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/command">&nbsp;&nbsp;command</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/size">&nbsp;&nbsp;size</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/segmentName">&nbsp;&nbsp;segmentName</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/vmaddr">&nbsp;&nbsp;vmaddr</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/vmsize">&nbsp;&nbsp;vmsize</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fileoff">&nbsp;&nbsp;fileoff</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/filesize">&nbsp;&nbsp;filesize</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/maxprot">&nbsp;&nbsp;maxprot</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initprot">&nbsp;&nbsp;initprot</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/nsects">&nbsp;&nbsp;nsects</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/flags">&nbsp;&nbsp;flags</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithStruct:">&ndash;&nbsp;initWithStruct:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/segmentCommandAtOffset:inData:">+&nbsp;segmentCommandAtOffset:inData:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sectionWithName:">&ndash;&nbsp;sectionWithName:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/description">&ndash;&nbsp;description</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/command" title="command"></a>
+	<h3 class="subsubtitle method-title">command</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property uint32_t command</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fileoff" title="fileoff"></a>
+	<h3 class="subsubtitle method-title">fileoff</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property uint32_t fileoff</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/filesize" title="filesize"></a>
+	<h3 class="subsubtitle method-title">filesize</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property uint32_t filesize</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/flags" title="flags"></a>
+	<h3 class="subsubtitle method-title">flags</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property uint32_t flags</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initprot" title="initprot"></a>
+	<h3 class="subsubtitle method-title">initprot</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property vm_prot_t initprot</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/location" title="location"></a>
+	<h3 class="subsubtitle method-title">location</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property unsigned int location</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/maxprot" title="maxprot"></a>
+	<h3 class="subsubtitle method-title">maxprot</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property vm_prot_t maxprot</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/nsects" title="nsects"></a>
+	<h3 class="subsubtitle method-title">nsects</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property uint32_t nsects</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sections" title="sections"></a>
+	<h3 class="subsubtitle method-title">sections</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property NSMutableArray *sections</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/segmentName" title="segmentName"></a>
+	<h3 class="subsubtitle method-title">segmentName</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property NSString *segmentName</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/size" title="size"></a>
+	<h3 class="subsubtitle method-title">size</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property uint32_t size</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/vmaddr" title="vmaddr"></a>
+	<h3 class="subsubtitle method-title">vmaddr</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property uint32_t vmaddr</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/vmsize" title="vmsize"></a>
+	<h3 class="subsubtitle method-title">vmsize</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property uint32_t vmsize</code></div>
+
+    
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/segmentCommandAtOffset:inData:" title="segmentCommandAtOffset:inData:"></a>
+	<h3 class="subsubtitle method-title">segmentCommandAtOffset:inData:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>+ (SegmentCommand *)segmentCommandAtOffset:(unsigned int)<em>off</em> inData:(NSData *)<em>binary</em></code></div>
+
+    
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/description" title="description"></a>
+	<h3 class="subsubtitle method-title">description</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)description</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithStruct:" title="initWithStruct:"></a>
+	<h3 class="subsubtitle method-title">initWithStruct:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (SegmentCommand *)initWithStruct:(struct segment_command)<em>segment</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sectionWithName:" title="sectionWithName:"></a>
+	<h3 class="subsubtitle method-title">sectionWithName:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (Section *)sectionWithName:(NSString *)<em>sectname</em></code></div>
+
+    
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2012 bsmt. All rights reserved. (Last updated: 2012-11-09)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

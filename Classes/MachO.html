@@ -1,0 +1,1535 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>MachO Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 840)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">Krush </a></h1>
+				<a id="developerHome" href="../index.html">bsmt</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">MachO Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/arch">&nbsp;&nbsp;&nbsp;&nbsp;arch</option>
+	
+	<option value="//api/name/data">&nbsp;&nbsp;&nbsp;&nbsp;data</option>
+	
+	<option value="//api/name/header">&nbsp;&nbsp;&nbsp;&nbsp;header</option>
+	
+	<option value="//api/name/location">&nbsp;&nbsp;&nbsp;&nbsp;location</option>
+	
+	<option value="//api/name/segments">&nbsp;&nbsp;&nbsp;&nbsp;segments</option>
+	
+	<option value="//api/name/symtab">&nbsp;&nbsp;&nbsp;&nbsp;symtab</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/i386ObjectAtOffset:inData:">&nbsp;&nbsp;&nbsp;&nbsp;+ i386ObjectAtOffset:inData:</option>
+	
+	<option value="//api/name/x86_64ObjectAtOffset:inData:">&nbsp;&nbsp;&nbsp;&nbsp;+ x86_64ObjectAtOffset:inData:</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/categories">&nbsp;&nbsp;&nbsp;&nbsp;- categories</option>
+	
+	<option value="//api/name/classes">&nbsp;&nbsp;&nbsp;&nbsp;- classes</option>
+	
+	<option value="//api/name/convertRealOffset:">&nbsp;&nbsp;&nbsp;&nbsp;- convertRealOffset:</option>
+	
+	<option value="//api/name/convertVirtualOffset:">&nbsp;&nbsp;&nbsp;&nbsp;- convertVirtualOffset:</option>
+	
+	<option value="//api/name/description">&nbsp;&nbsp;&nbsp;&nbsp;- description</option>
+	
+	<option value="//api/name/findAllSymbols">&nbsp;&nbsp;&nbsp;&nbsp;- findAllSymbols</option>
+	
+	<option value="//api/name/init">&nbsp;&nbsp;&nbsp;&nbsp;- init</option>
+	
+	<option value="//api/name/realOffsetForSymbol:">&nbsp;&nbsp;&nbsp;&nbsp;- realOffsetForSymbol:</option>
+	
+	<option value="//api/name/section64:inSegment:">&nbsp;&nbsp;&nbsp;&nbsp;- section64:inSegment:</option>
+	
+	<option value="//api/name/section:inSegment:">&nbsp;&nbsp;&nbsp;&nbsp;- section:inSegment:</option>
+	
+	<option value="//api/name/segment64WithName:">&nbsp;&nbsp;&nbsp;&nbsp;- segment64WithName:</option>
+	
+	<option value="//api/name/segmentWithName:">&nbsp;&nbsp;&nbsp;&nbsp;- segmentWithName:</option>
+	
+	<option value="//api/name/virtualOffsetForSymbol:">&nbsp;&nbsp;&nbsp;&nbsp;- virtualOffsetForSymbol:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Initialization">Initialization</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Segments">Segments</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Offset Conversion">Offset Conversion</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Symbol Methods">Symbol Methods</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/arch">arch</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/data">data</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/header">header</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/location">location</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/segments">segments</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/symtab">symtab</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/i386ObjectAtOffset:inData:">i386ObjectAtOffset:inData:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/x86_64ObjectAtOffset:inData:">x86_64ObjectAtOffset:inData:</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/categories">categories</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/classes">classes</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/convertRealOffset:">convertRealOffset:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/convertVirtualOffset:">convertVirtualOffset:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/description">description</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/findAllSymbols">findAllSymbols</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/init">init</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/realOffsetForSymbol:">realOffsetForSymbol:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/section64:inSegment:">section64:inSegment:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/section:inSegment:">section:inSegment:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/segment64WithName:">segment64WithName:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/segmentWithName:">segmentWithName:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/virtualOffsetForSymbol:">virtualOffsetForSymbol:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="MachO Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">MachO Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">MachO.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>MachO representation class.
+A category on the MachO class that adds support for finding symbols.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/data">&nbsp;&nbsp;data</a></code>
+		<span class="tooltip"><p>The MachO data found inside the binary.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/location">&nbsp;&nbsp;location</a></code>
+		<span class="tooltip"><p>Starting offset of the object in the binary.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/arch">&nbsp;&nbsp;arch</a></code>
+		<span class="tooltip"><p>Target architecture of the MachO. i386 or x86_64.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/header">&nbsp;&nbsp;header</a></code>
+		<span class="tooltip"><p>The header structure/object containing information about the MachO.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/segments">&nbsp;&nbsp;segments</a></code>
+		<span class="tooltip"><p>All of the segments the object is separated into.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/symtab">&nbsp;&nbsp;symtab</a></code>
+		<span class="tooltip"><p>Symbol table, contains information about functions if the binary isn&rsquo;t stripped.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Initialization" name="task_Initialization"></a>
+						<h3 class="subsubtitle task-title">Initialization</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/i386ObjectAtOffset:inData:">+&nbsp;i386ObjectAtOffset:inData:</a></code>
+		<span class="tooltip"><p>Read a 32 bit MachO inside a binary.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/x86_64ObjectAtOffset:inData:">+&nbsp;x86_64ObjectAtOffset:inData:</a></code>
+		<span class="tooltip"><p>Read a 64 bit MachO inside a binary.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Segments" name="task_Segments"></a>
+						<h3 class="subsubtitle task-title">Segments</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/segmentWithName:">&ndash;&nbsp;segmentWithName:</a></code>
+		<span class="tooltip"><p>Find a segment inside a 32 bit MachO.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/segment64WithName:">&ndash;&nbsp;segment64WithName:</a></code>
+		<span class="tooltip"><p>Find a segment inside a 64 bit MachO.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/section:inSegment:">&ndash;&nbsp;section:inSegment:</a></code>
+		<span class="tooltip"><p>Find a segment,section pair in a 32 bit MachO</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/section64:inSegment:">&ndash;&nbsp;section64:inSegment:</a></code>
+		<span class="tooltip"><p>Find a segment,section pair in a 64 bit MachO</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Offset Conversion" name="task_Offset Conversion"></a>
+						<h3 class="subsubtitle task-title">Offset Conversion</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/convertVirtualOffset:">&ndash;&nbsp;convertVirtualOffset:</a></code>
+		<span class="tooltip"><p>Convert a virtual offset in the MachO to the file offset in its binary file.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/convertRealOffset:">&ndash;&nbsp;convertRealOffset:</a></code>
+		<span class="tooltip"><p>Convert a file offset to a virtual offset inside the MachO.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/description">&ndash;&nbsp;description</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Symbol Methods" name="task_Symbol Methods"></a>
+						<h3 class="subsubtitle task-title">Symbol Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/virtualOffsetForSymbol:">&ndash;&nbsp;virtualOffsetForSymbol:</a></code>
+		<span class="tooltip"><p>Find an individual symbol in the MachO.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/realOffsetForSymbol:">&ndash;&nbsp;realOffsetForSymbol:</a></code>
+		<span class="tooltip"><p>Find an individual symbol in the MachO.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/findAllSymbols">&ndash;&nbsp;findAllSymbols</a></code>
+		<span class="tooltip"><p>Find all symbols in the MachO.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/classes">&ndash;&nbsp;classes</a></code>
+		<span class="tooltip"><p>Find all Objective-C classes in the MachO.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/categories">&ndash;&nbsp;categories</a></code>
+		<span class="tooltip"><p>Find all Objective-C categories in the MachO.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/arch" title="arch"></a>
+	<h3 class="subsubtitle method-title">arch</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Target architecture of the MachO. i386 or x86_64.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property cpu_type_t arch</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MachO.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/data" title="data"></a>
+	<h3 class="subsubtitle method-title">data</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The MachO data found inside the binary.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property NSData *data</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MachO.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/header" title="header"></a>
+	<h3 class="subsubtitle method-title">header</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The header structure/object containing information about the MachO.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (retain) Header *header</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MachO.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/location" title="location"></a>
+	<h3 class="subsubtitle method-title">location</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Starting offset of the object in the binary.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property unsigned int location</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MachO.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/segments" title="segments"></a>
+	<h3 class="subsubtitle method-title">segments</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>All of the segments the object is separated into.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property NSMutableArray *segments</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MachO.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/symtab" title="symtab"></a>
+	<h3 class="subsubtitle method-title">symtab</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Symbol table, contains information about functions if the binary isn&rsquo;t stripped.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property SymtabCommand *symtab</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MachO.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/i386ObjectAtOffset:inData:" title="i386ObjectAtOffset:inData:"></a>
+	<h3 class="subsubtitle method-title">i386ObjectAtOffset:inData:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Read a 32 bit MachO inside a binary.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (MachO *)i386ObjectAtOffset:(unsigned int)<em>off</em> inData:(NSData *)<em>bin</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>off</em></dt>
+			<dd><p>Offset at which the MachO begins in a binary.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>bin</em></dt>
+			<dd><p>The <a href="../Classes/Binary.html">Binary</a> <a href="#//api/name/data">data</a> to look in.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A MachO with load commands and other information stored inside.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>For most other features to work, this needs to be called as opposed to <a href="#//api/name/init">init</a>, as this finds all of the needed information.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/x86_64ObjectAtOffset:inData:">+ x86_64ObjectAtOffset:inData:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MachO.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/x86_64ObjectAtOffset:inData:" title="x86_64ObjectAtOffset:inData:"></a>
+	<h3 class="subsubtitle method-title">x86_64ObjectAtOffset:inData:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Read a 64 bit MachO inside a binary.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (MachO *)x86_64ObjectAtOffset:(unsigned int)<em>off</em> inData:(NSData *)<em>bin</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>off</em></dt>
+			<dd><p>Offset at which the MachO begins in a binary.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>bin</em></dt>
+			<dd><p>The <a href="../Classes/Binary.html">Binary</a> <a href="#//api/name/data">data</a> to look in.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A MachO with load commands and other information stored inside.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>For most other features to work, this needs to be called as opposed to <a href="#//api/name/init">init</a>, as this finds all of the needed information.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/i386ObjectAtOffset:inData:">+ i386ObjectAtOffset:inData:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MachO.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/categories" title="categories"></a>
+	<h3 class="subsubtitle method-title">categories</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Find all Objective-C categories in the MachO.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSArray *)categories</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An array with every category found in the MachO.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MachO+Symbol.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/classes" title="classes"></a>
+	<h3 class="subsubtitle method-title">classes</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Find all Objective-C classes in the MachO.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSArray *)classes</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An array with every class found in the MachO.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MachO+Symbol.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/convertRealOffset:" title="convertRealOffset:"></a>
+	<h3 class="subsubtitle method-title">convertRealOffset:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert a file offset to a virtual offset inside the MachO.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (unsigned long)convertRealOffset:(unsigned long)<em>real</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>real</em></dt>
+			<dd><p>The file offset to convert.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The virtual offset corresponding to the file offset.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/convertVirtualOffset:">&ndash; convertVirtualOffset:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MachO.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/convertVirtualOffset:" title="convertVirtualOffset:"></a>
+	<h3 class="subsubtitle method-title">convertVirtualOffset:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Convert a virtual offset in the MachO to the file offset in its binary file.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (unsigned long)convertVirtualOffset:(unsigned long)<em>virtual</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>virtual</em></dt>
+			<dd><p>The offset to convert.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The file offset corresponding to the virtual offset.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/convertRealOffset:">&ndash; convertRealOffset:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MachO.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/description" title="description"></a>
+	<h3 class="subsubtitle method-title">description</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)description</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/findAllSymbols" title="findAllSymbols"></a>
+	<h3 class="subsubtitle method-title">findAllSymbols</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Find all symbols in the MachO.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSDictionary *)findAllSymbols</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A dictionary with every symbol found in the MachO. Key is the symbol name, value is the virtual offset.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MachO+Symbol.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/init" title="init"></a>
+	<h3 class="subsubtitle method-title">init</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (MachO *)init</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/realOffsetForSymbol:" title="realOffsetForSymbol:"></a>
+	<h3 class="subsubtitle method-title">realOffsetForSymbol:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Find an individual symbol in the MachO.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (unsigned long)realOffsetForSymbol:(NSString *)<em>sym</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>sym</em></dt>
+			<dd><p>The symbol name. E.g. [DerpClass herpMethod:]</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The real file offset that the symbol points to.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MachO+Symbol.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/section64:inSegment:" title="section64:inSegment:"></a>
+	<h3 class="subsubtitle method-title">section64:inSegment:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Find a segment,section pair in a 64 bit MachO</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (Section64 *)section64:(NSString *)<em>sectName</em> inSegment:(NSString *)<em>segName</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>sectName</em></dt>
+			<dd><p>Name of the section. E.g. <strong>text or </strong>const</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A <a href="../Classes/Section.html">Section</a> object representing the section found in the MachO</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/segmentWithName:">&ndash; segmentWithName:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/segment64WithName:">&ndash; segment64WithName:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/section:inSegment:">&ndash; section:inSegment:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MachO.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/section:inSegment:" title="section:inSegment:"></a>
+	<h3 class="subsubtitle method-title">section:inSegment:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Find a segment,section pair in a 32 bit MachO</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (Section *)section:(NSString *)<em>sectName</em> inSegment:(NSString *)<em>segName</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>sectName</em></dt>
+			<dd><p>Name of the section. E.g. <strong>text or </strong>const</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A <a href="../Classes/Section.html">Section</a> object representing the section found in the MachO</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/segmentWithName:">&ndash; segmentWithName:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/segment64WithName:">&ndash; segment64WithName:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/section64:inSegment:">&ndash; section64:inSegment:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MachO.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/segment64WithName:" title="segment64WithName:"></a>
+	<h3 class="subsubtitle method-title">segment64WithName:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Find a segment inside a 64 bit MachO.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (SegmentCommand64 *)segment64WithName:(NSString *)<em>segname</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>segname</em></dt>
+			<dd><p>Name of the segment. E.g. <strong>TEXT or </strong>DATA</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A <a href="../Classes/SegmentCommand.html">SegmentCommand</a> object representing the segment found in the MachO</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/segmentWithName:">&ndash; segmentWithName:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/section:inSegment:">&ndash; section:inSegment:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/section64:inSegment:">&ndash; section64:inSegment:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MachO.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/segmentWithName:" title="segmentWithName:"></a>
+	<h3 class="subsubtitle method-title">segmentWithName:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Find a segment inside a 32 bit MachO.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (SegmentCommand *)segmentWithName:(NSString *)<em>segname</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>segname</em></dt>
+			<dd><p>Name of the segment. E.g. <strong>TEXT or </strong>DATA</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A <a href="../Classes/SegmentCommand.html">SegmentCommand</a> object representing the segment found in the MachO</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/segment64WithName:">&ndash; segment64WithName:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/section:inSegment:">&ndash; section:inSegment:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/section64:inSegment:">&ndash; section64:inSegment:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MachO.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/virtualOffsetForSymbol:" title="virtualOffsetForSymbol:"></a>
+	<h3 class="subsubtitle method-title">virtualOffsetForSymbol:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Find an individual symbol in the MachO.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (unsigned long)virtualOffsetForSymbol:(NSString *)<em>sym</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>sym</em></dt>
+			<dd><p>The symbol name. E.g. [HerpClass derpMethod:]</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The virtual offset that the symbol points to.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MachO+Symbol.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2012 bsmt. All rights reserved. (Last updated: 2012-11-09)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

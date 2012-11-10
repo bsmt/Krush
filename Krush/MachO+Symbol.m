@@ -46,7 +46,7 @@
                     // we skip objc info because it isn't always in the nlists
                     continue;
                 }
-                symbols[name] = [NSNumber numberWithUnsignedLong:nlist.value];
+                symbols[name] = [NSNumber numberWithUnsignedLong:(unsigned long)nlist.value];
             }
         }
         

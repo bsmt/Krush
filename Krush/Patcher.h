@@ -22,6 +22,7 @@
 /// The file that will be modified.
 @property NSURL *target;
 
+
 /// @name Initialization
 
 /** Create a new Patcher object targetting the specified Binary.
@@ -37,6 +38,7 @@
  @return A patcher object ready to modify the file.
  */
 +(Patcher *)patcherWithFile:(NSURL *)path;
+
 
 /// @name Patching
 
@@ -71,6 +73,6 @@
  @param replace The data that will replace any matches.
  @return The patch status. TRUE = success, FALSE = failure.
  */
--(BOOL)wildcardReplaceData:(NSData *)search with:(NSData *)replace useWildcards:(BOOL)wildcard;
+-(BOOL)wildcardReplaceData:(NSData *)search with:(NSData *)replace;
 
 @end

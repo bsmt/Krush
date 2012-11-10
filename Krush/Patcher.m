@@ -114,9 +114,10 @@
             [handle writeData:patchData];
             
             [handle closeFile];
-            return TRUE;
         }
     }
+
+    return TRUE;
 }
 
 @end

@@ -9,7 +9,7 @@
 #import "ObjcSymtab.h"
 #import "ObjcClass.h"
 #import "ObjcCategory.h"
-#import "NSData+Util.h"
+#import "NSData+Reading.h"
 
 /** A category on the MachO class that adds support for finding symbols. */
 

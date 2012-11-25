@@ -5,7 +5,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "NSData+Util.h"
+#import "NSData+Reading.h"
 #import "SegmentCommand.h"
 #import "SymtabCommand.h"
 

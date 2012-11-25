@@ -10,7 +10,7 @@
 #import "MachO.h"
 #import "MachO+Symbol.h"
 #import "Assembler.h"
-#import "NSData+Util.h"
+#import "NSData+Split.h"
 
 /** Patches Binary objects and other types of files. */
 

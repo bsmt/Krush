@@ -6,8 +6,6 @@
 
 #import <Foundation/Foundation.h>
 
-#import "NSData+Util.h"
-
 #include <machine/endian.h>
 
 /** Assembles instructions needed by the Patcher. */

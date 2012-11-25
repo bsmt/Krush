@@ -6,7 +6,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "NSData+Util.h"
+#import "NSData+Reading.h"
 #import "MachO.h"
 
 #include <mach-o/loader.h>

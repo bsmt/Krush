@@ -8,7 +8,7 @@
 #import "MachO.h"
 #import "ObjcSymtab.h"
 #import "ObjcMethod.h"
-#import "NSData+Util.h"
+#import "NSData+Conversion.h"
 
 /** Represents an Objective-C class, and contains all provided information about it. */
 

@@ -21,8 +21,6 @@
 		4602B01D161E3AB3003C9EAC /* MachO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4602AFF6161E3AB3003C9EAC /* MachO.m */; };
 		4602B01E161E3AB3003C9EAC /* MachO+Symbol.h in Headers */ = {isa = PBXBuildFile; fileRef = 4602AFF7161E3AB3003C9EAC /* MachO+Symbol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4602B01F161E3AB3003C9EAC /* MachO+Symbol.m in Sources */ = {isa = PBXBuildFile; fileRef = 4602AFF8161E3AB3003C9EAC /* MachO+Symbol.m */; };
-		4602B021161E3AB3003C9EAC /* NSData+Util.h in Headers */ = {isa = PBXBuildFile; fileRef = 4602AFFA161E3AB3003C9EAC /* NSData+Util.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4602B022161E3AB3003C9EAC /* NSData+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 4602AFFB161E3AB3003C9EAC /* NSData+Util.m */; };
 		4602B023161E3AB3003C9EAC /* ObjcCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 4602AFFC161E3AB3003C9EAC /* ObjcCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4602B024161E3AB3003C9EAC /* ObjcCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4602AFFD161E3AB3003C9EAC /* ObjcCategory.m */; };
 		4602B025161E3AB3003C9EAC /* ObjcClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 4602AFFE161E3AB3003C9EAC /* ObjcClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,6 +38,16 @@
 		4602B031161E3AB3003C9EAC /* SegmentCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 4602B00A161E3AB3003C9EAC /* SegmentCommand.m */; };
 		4602B033161E3AB3003C9EAC /* SymtabCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 4602B00C161E3AB3003C9EAC /* SymtabCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4602B034161E3AB3003C9EAC /* SymtabCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 4602B00D161E3AB3003C9EAC /* SymtabCommand.m */; };
+		463902001662CBDF00420B39 /* NSData+Conversion.h in Headers */ = {isa = PBXBuildFile; fileRef = 463901FE1662CBDF00420B39 /* NSData+Conversion.h */; };
+		463902011662CBDF00420B39 /* NSData+Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 463901FF1662CBDF00420B39 /* NSData+Conversion.m */; };
+		463902051662CC8E00420B39 /* NSData+Reading.h in Headers */ = {isa = PBXBuildFile; fileRef = 463902031662CC8E00420B39 /* NSData+Reading.h */; };
+		463902061662CC8E00420B39 /* NSData+Reading.m in Sources */ = {isa = PBXBuildFile; fileRef = 463902041662CC8E00420B39 /* NSData+Reading.m */; };
+		463902091662CD1300420B39 /* NSData+Digest.h in Headers */ = {isa = PBXBuildFile; fileRef = 463902071662CD1300420B39 /* NSData+Digest.h */; };
+		4639020A1662CD1300420B39 /* NSData+Digest.m in Sources */ = {isa = PBXBuildFile; fileRef = 463902081662CD1300420B39 /* NSData+Digest.m */; };
+		4639020D1662CE0200420B39 /* NSData+Split.h in Headers */ = {isa = PBXBuildFile; fileRef = 4639020B1662CE0200420B39 /* NSData+Split.h */; };
+		4639020E1662CE0200420B39 /* NSData+Split.m in Sources */ = {isa = PBXBuildFile; fileRef = 4639020C1662CE0200420B39 /* NSData+Split.m */; };
+		463902111662CEB500420B39 /* NSData+Endian.h in Headers */ = {isa = PBXBuildFile; fileRef = 4639020F1662CEB500420B39 /* NSData+Endian.h */; };
+		463902121662CEB500420B39 /* NSData+Endian.m in Sources */ = {isa = PBXBuildFile; fileRef = 463902101662CEB500420B39 /* NSData+Endian.m */; };
 		46716C68161E9371005E60E8 /* Krush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4602AFCF161E3AA1003C9EAC /* Krush.framework */; };
 		4699B556163F391E00DE2608 /* test1 in Resources */ = {isa = PBXBuildFile; fileRef = 4699B555163F391E00DE2608 /* test1 */; };
 		4699B55B163F399900DE2608 /* SymbolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4699B55A163F399900DE2608 /* SymbolTests.m */; };
@@ -95,8 +103,6 @@
 		4602AFF6161E3AB3003C9EAC /* MachO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MachO.m; sourceTree = "<group>"; };
 		4602AFF7161E3AB3003C9EAC /* MachO+Symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MachO+Symbol.h"; sourceTree = "<group>"; };
 		4602AFF8161E3AB3003C9EAC /* MachO+Symbol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MachO+Symbol.m"; sourceTree = "<group>"; };
-		4602AFFA161E3AB3003C9EAC /* NSData+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Util.h"; sourceTree = "<group>"; };
-		4602AFFB161E3AB3003C9EAC /* NSData+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Util.m"; sourceTree = "<group>"; };
 		4602AFFC161E3AB3003C9EAC /* ObjcCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjcCategory.h; sourceTree = "<group>"; };
 		4602AFFD161E3AB3003C9EAC /* ObjcCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcCategory.m; sourceTree = "<group>"; };
 		4602AFFE161E3AB3003C9EAC /* ObjcClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjcClass.h; sourceTree = "<group>"; };
@@ -114,6 +120,16 @@
 		4602B00A161E3AB3003C9EAC /* SegmentCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentCommand.m; sourceTree = "<group>"; };
 		4602B00C161E3AB3003C9EAC /* SymtabCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymtabCommand.h; sourceTree = "<group>"; };
 		4602B00D161E3AB3003C9EAC /* SymtabCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SymtabCommand.m; sourceTree = "<group>"; };
+		463901FE1662CBDF00420B39 /* NSData+Conversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Conversion.h"; sourceTree = "<group>"; };
+		463901FF1662CBDF00420B39 /* NSData+Conversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Conversion.m"; sourceTree = "<group>"; };
+		463902031662CC8E00420B39 /* NSData+Reading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Reading.h"; sourceTree = "<group>"; };
+		463902041662CC8E00420B39 /* NSData+Reading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Reading.m"; sourceTree = "<group>"; };
+		463902071662CD1300420B39 /* NSData+Digest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Digest.h"; sourceTree = "<group>"; };
+		463902081662CD1300420B39 /* NSData+Digest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Digest.m"; sourceTree = "<group>"; };
+		4639020B1662CE0200420B39 /* NSData+Split.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Split.h"; sourceTree = "<group>"; };
+		4639020C1662CE0200420B39 /* NSData+Split.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Split.m"; sourceTree = "<group>"; };
+		4639020F1662CEB500420B39 /* NSData+Endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Endian.h"; sourceTree = "<group>"; };
+		463902101662CEB500420B39 /* NSData+Endian.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Endian.m"; sourceTree = "<group>"; };
 		4699B555163F391E00DE2608 /* test1 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = test1; sourceTree = "<group>"; };
 		4699B559163F399900DE2608 /* SymbolTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymbolTests.h; sourceTree = "<group>"; };
 		4699B55A163F399900DE2608 /* SymbolTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SymbolTests.m; sourceTree = "<group>"; };
@@ -192,7 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				4602B03E161E3B2B003C9EAC /* MachO */,
-				4602B03A161E3AF2003C9EAC /* Utilities */,
+				4602B03A161E3AF2003C9EAC /* NSData Categories */,
 				4602AFD9161E3AA1003C9EAC /* Supporting Files */,
 			);
 			path = Krush;
@@ -219,13 +235,21 @@
 			name = Patcher;
 			sourceTree = "<group>";
 		};
-		4602B03A161E3AF2003C9EAC /* Utilities */ = {
+		4602B03A161E3AF2003C9EAC /* NSData Categories */ = {
 			isa = PBXGroup;
 			children = (
-				4602AFFA161E3AB3003C9EAC /* NSData+Util.h */,
-				4602AFFB161E3AB3003C9EAC /* NSData+Util.m */,
+				463901FE1662CBDF00420B39 /* NSData+Conversion.h */,
+				463901FF1662CBDF00420B39 /* NSData+Conversion.m */,
+				463902031662CC8E00420B39 /* NSData+Reading.h */,
+				463902041662CC8E00420B39 /* NSData+Reading.m */,
+				4639020F1662CEB500420B39 /* NSData+Endian.h */,
+				463902101662CEB500420B39 /* NSData+Endian.m */,
+				463902071662CD1300420B39 /* NSData+Digest.h */,
+				463902081662CD1300420B39 /* NSData+Digest.m */,
+				4639020B1662CE0200420B39 /* NSData+Split.h */,
+				4639020C1662CE0200420B39 /* NSData+Split.m */,
 			);
-			name = Utilities;
+			name = "NSData Categories";
 			sourceTree = "<group>";
 		};
 		4602B03B161E3B03003C9EAC /* ObjC */ = {
@@ -330,7 +354,6 @@
 				4602B018161E3AB3003C9EAC /* Header.h in Headers */,
 				4602B01C161E3AB3003C9EAC /* MachO.h in Headers */,
 				4602B01E161E3AB3003C9EAC /* MachO+Symbol.h in Headers */,
-				4602B021161E3AB3003C9EAC /* NSData+Util.h in Headers */,
 				4602B023161E3AB3003C9EAC /* ObjcCategory.h in Headers */,
 				4602B025161E3AB3003C9EAC /* ObjcClass.h in Headers */,
 				4602B027161E3AB3003C9EAC /* ObjcMethod.h in Headers */,
@@ -340,6 +363,11 @@
 				4602B02E161E3AB3003C9EAC /* Patcher.h in Headers */,
 				4602B030161E3AB3003C9EAC /* SegmentCommand.h in Headers */,
 				4602B033161E3AB3003C9EAC /* SymtabCommand.h in Headers */,
+				463902001662CBDF00420B39 /* NSData+Conversion.h in Headers */,
+				463902051662CC8E00420B39 /* NSData+Reading.h in Headers */,
+				463902091662CD1300420B39 /* NSData+Digest.h in Headers */,
+				4639020D1662CE0200420B39 /* NSData+Split.h in Headers */,
+				463902111662CEB500420B39 /* NSData+Endian.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,7 +485,6 @@
 				4602B019161E3AB3003C9EAC /* Header.m in Sources */,
 				4602B01D161E3AB3003C9EAC /* MachO.m in Sources */,
 				4602B01F161E3AB3003C9EAC /* MachO+Symbol.m in Sources */,
-				4602B022161E3AB3003C9EAC /* NSData+Util.m in Sources */,
 				4602B024161E3AB3003C9EAC /* ObjcCategory.m in Sources */,
 				4602B026161E3AB3003C9EAC /* ObjcClass.m in Sources */,
 				4602B028161E3AB3003C9EAC /* ObjcMethod.m in Sources */,
@@ -466,6 +493,11 @@
 				4602B02F161E3AB3003C9EAC /* Patcher.m in Sources */,
 				4602B031161E3AB3003C9EAC /* SegmentCommand.m in Sources */,
 				4602B034161E3AB3003C9EAC /* SymtabCommand.m in Sources */,
+				463902011662CBDF00420B39 /* NSData+Conversion.m in Sources */,
+				463902061662CC8E00420B39 /* NSData+Reading.m in Sources */,
+				4639020A1662CD1300420B39 /* NSData+Digest.m in Sources */,
+				4639020E1662CE0200420B39 /* NSData+Split.m in Sources */,
+				463902121662CEB500420B39 /* NSData+Endian.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,6 +716,7 @@
 				46D872481640B46C004C113A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

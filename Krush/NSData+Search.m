@@ -1,9 +1,7 @@
 //
 //  NSData+Search.m
-//  Krush
 //
-//  Created by bsmt on 11/25/12.
-//
+//  Created by ████
 //
 
 #import "NSData+Search.h"
@@ -21,12 +19,17 @@
     }
     
     [ranges addObject:[NSValue value:&initial withObjCType:@encode(NSRange)]];
+    
+    searchRange.location = initial.location + initial.length;
+    searchRange.length = [self length] - (initial.location + initial.length);
     while(true)
     {
         NSRange nextOccurance = [self rangeOfData:search options:option range:searchRange];
-        if (initial.location != NSNotFound)
+        if (nextOccurance.location != NSNotFound)
         {
             [ranges addObject:[NSValue value:&nextOccurance withObjCType:@encode(NSRange)]];
+            searchRange.location = nextOccurance.location + nextOccurance.length;
+            searchRange.length = [self length] - (nextOccurance.location + nextOccurance.length);
         }
         else
         {

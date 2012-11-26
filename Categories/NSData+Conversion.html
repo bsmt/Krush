@@ -44,23 +44,7 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/MD5Digest">&nbsp;&nbsp;&nbsp;&nbsp;- MD5Digest</option>
-	
-	<option value="//api/name/MD5HexDigest">&nbsp;&nbsp;&nbsp;&nbsp;- MD5HexDigest</option>
-	
-	<option value="//api/name/componentsSeparatedByByte:">&nbsp;&nbsp;&nbsp;&nbsp;- componentsSeparatedByByte:</option>
-	
 	<option value="//api/name/hexadecimalString">&nbsp;&nbsp;&nbsp;&nbsp;- hexadecimalString</option>
-	
-	<option value="//api/name/intDataInRange:">&nbsp;&nbsp;&nbsp;&nbsp;- intDataInRange:</option>
-	
-	<option value="//api/name/littleEndianIntDataInRange:">&nbsp;&nbsp;&nbsp;&nbsp;- littleEndianIntDataInRange:</option>
-	
-	<option value="//api/name/readTillNullAtOffset:">&nbsp;&nbsp;&nbsp;&nbsp;- readTillNullAtOffset:</option>
-	
-	<option value="//api/name/stringDataInRange:">&nbsp;&nbsp;&nbsp;&nbsp;- stringDataInRange:</option>
-	
-	<option value="//api/name/swapEndian">&nbsp;&nbsp;&nbsp;&nbsp;- swapEndian</option>
 	
 	<option value="//api/name/toChar">&nbsp;&nbsp;&nbsp;&nbsp;- toChar</option>
 	
@@ -92,16 +76,6 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_String conversion">String conversion</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Integer conversion">Integer conversion</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Endian">Endian</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Reading">Reading</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Hashing">Hashing</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Splitting">Splitting</a></span></li>
-	
 </ul></li>
 
 
@@ -114,23 +88,7 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/MD5Digest">MD5Digest</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/MD5HexDigest">MD5HexDigest</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/componentsSeparatedByByte:">componentsSeparatedByByte:</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hexadecimalString">hexadecimalString</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/intDataInRange:">intDataInRange:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/littleEndianIntDataInRange:">littleEndianIntDataInRange:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readTillNullAtOffset:">readTillNullAtOffset:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringDataInRange:">stringDataInRange:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/swapEndian">swapEndian</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/toChar">toChar</a></span></li>
 	
@@ -166,7 +124,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">NSData+Util.h</td>
+	<td class="specification-value">NSData+Conversion.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -176,9 +134,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>A set of methods that help with reading NSData from bianry files.</p>
-
-<p>Common operations are converting to strings, swapping endian, reading strings, and hashing.</p>
+						<p>An NSData category that helps with converting NSData objects to other types.</p>
 					</div>
 					
 					
@@ -232,13 +188,6 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/stringDataInRange:">&ndash;&nbsp;stringDataInRange:</a></code>
-		<span class="tooltip"><p>Convert the data in the specified range to an NSString encoded in ASCII.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
 		<code><a href="#//api/name/toChar">&ndash;&nbsp;toChar</a></code>
 		<span class="tooltip"><p>Convert the NSData to an ASCII char string.</p></span>
 	</span>
@@ -248,95 +197,6 @@
 	<span class="tooltip">
 		<code><a href="#//api/name/toCharWithLength:">&ndash;&nbsp;toCharWithLength:</a></code>
 		<span class="tooltip"><p>Convert the NSData to an ASCII char string while limiting the length.</p></span>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="Integer conversion" name="task_Integer conversion"></a>
-						<h3 class="subsubtitle task-title">Integer conversion</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/intDataInRange:">&ndash;&nbsp;intDataInRange:</a></code>
-		<span class="tooltip"><p>Convert the data in the specified range to an unsigned long</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/littleEndianIntDataInRange:">&ndash;&nbsp;littleEndianIntDataInRange:</a></code>
-		<span class="tooltip"><p>Same as intDataInRange but swaps the endian.</p></span>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="Endian" name="task_Endian"></a>
-						<h3 class="subsubtitle task-title">Endian</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/swapEndian">&ndash;&nbsp;swapEndian</a></code>
-		<span class="tooltip"><p>Swaps the endian of the data.</p></span>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="Reading" name="task_Reading"></a>
-						<h3 class="subsubtitle task-title">Reading</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/readTillNullAtOffset:">&ndash;&nbsp;readTillNullAtOffset:</a></code>
-		<span class="tooltip"><p>Returns the data terminated by a NULL byte starting at off.</p></span>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="Hashing" name="task_Hashing"></a>
-						<h3 class="subsubtitle task-title">Hashing</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/MD5Digest">&ndash;&nbsp;MD5Digest</a></code>
-		<span class="tooltip"><p>Hashes the NSData as MD5.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/MD5HexDigest">&ndash;&nbsp;MD5HexDigest</a></code>
-		<span class="tooltip"><p>Hex representation of the NSData&rsquo;s md5sum.</p></span>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="Splitting" name="task_Splitting"></a>
-						<h3 class="subsubtitle task-title">Splitting</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/componentsSeparatedByByte:">&ndash;&nbsp;componentsSeparatedByByte:</a></code>
-		<span class="tooltip"><p>Splits the source data into any array of components separated by the specified byte.</p></span>
 	</span>
 	
 	
@@ -356,149 +216,6 @@
 					<div class="section section-methods">
 						<a title="Instance Methods" name="instance_methods"></a>
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/MD5Digest" title="MD5Digest"></a>
-	<h3 class="subsubtitle method-title">MD5Digest</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Hashes the NSData as MD5.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (NSData *)MD5Digest</code></div>
-
-    
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>The md5sum of the data.</p>
-	</div>
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>MD5 utilities were taken from <a href="https://github.com/siuying/NSData-MD5">https://github.com/siuying/NSData-MD5</a></p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">NSData+Util.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/MD5HexDigest" title="MD5HexDigest"></a>
-	<h3 class="subsubtitle method-title">MD5HexDigest</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Hex representation of the NSData&rsquo;s md5sum.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (NSString *)MD5HexDigest</code></div>
-
-    
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>The md5sum of the data in a hex string.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">NSData+Util.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/componentsSeparatedByByte:" title="componentsSeparatedByByte:"></a>
-	<h3 class="subsubtitle method-title">componentsSeparatedByByte:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Splits the source data into any array of components separated by the specified byte.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (NSArray *)componentsSeparatedByByte:(Byte)<em>sep</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>sep</em></dt>
-			<dd><p>Byte to separate by.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>NSArray of components</p>
-	</div>
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Taken from <a href="http://www.geektheory.ca/blog/splitting-nsdata-object-data-specific-byte/">http://www.geektheory.ca/blog/splitting-nsdata-object-data-specific-byte/</a></p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">NSData+Util.h</code><br />
-	</div>				
-	
-	
-</div>
 						
 						<div class="section-method">
 	<a name="//api/name/hexadecimalString" title="hexadecimalString"></a>
@@ -548,281 +265,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">NSData+Util.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/intDataInRange:" title="intDataInRange:"></a>
-	<h3 class="subsubtitle method-title">intDataInRange:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Convert the data in the specified range to an unsigned long</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (unsigned long)intDataInRange:(NSRange)<em>range</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>range</em></dt>
-			<dd><p>The range to convert the data from.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>The data converted to an unsigned long. <00001000> becomes 0x000010000.</p>
-	</div>
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Equivalent of [[data subDataWithRange:range] toInt];
-Note: Limited to 8 bytes or less because it returns as an unsigned long.</p>
-	</div>
-	
-	
-	
-	
-	
-	<div class="method-subsection see-also-section">
-		<h4 class="method-subtitle">See Also</h4>
-		<ul>
-			
-			<li><code><p><a href="#//api/name/littleEndianIntDataInRange:">&ndash; littleEndianIntDataInRange:</a></p></code></li>
-			
-		</ul>
-	</div>
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">NSData+Util.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/littleEndianIntDataInRange:" title="littleEndianIntDataInRange:"></a>
-	<h3 class="subsubtitle method-title">littleEndianIntDataInRange:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Same as intDataInRange but swaps the endian.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (unsigned long)littleEndianIntDataInRange:(NSRange)<em>range</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>range</em></dt>
-			<dd><p>The range to convert the data from.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>The data converted to an unsigned long with the endian switch. <00001000> becomes 0x00100000.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection see-also-section">
-		<h4 class="method-subtitle">See Also</h4>
-		<ul>
-			
-			<li><code><p><a href="#//api/name/intDataInRange:">&ndash; intDataInRange:</a></p></code></li>
-			
-		</ul>
-	</div>
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">NSData+Util.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/readTillNullAtOffset:" title="readTillNullAtOffset:"></a>
-	<h3 class="subsubtitle method-title">readTillNullAtOffset:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Returns the data terminated by a NULL byte starting at off.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (NSData *)readTillNullAtOffset:(unsigned long)<em>off</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>off</em></dt>
-			<dd><p>Offset to read from.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>The data found starting at off that ends with a NULL.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">NSData+Util.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/stringDataInRange:" title="stringDataInRange:"></a>
-	<h3 class="subsubtitle method-title">stringDataInRange:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Convert the data in the specified range to an NSString encoded in ASCII.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (NSString *)stringDataInRange:(NSRange)<em>range</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>range</em></dt>
-			<dd><p>The range to read the string from.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>The NSData in range encoded as an ASCII NSString.</p>
-	</div>
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Equivalent of [[data subDataWithRange:range] toString];</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">NSData+Util.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/swapEndian" title="swapEndian"></a>
-	<h3 class="subsubtitle method-title">swapEndian</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Swaps the endian of the data.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (NSData *)swapEndian</code></div>
-
-    
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>The source data with the endian swapped. <00000001> is returned as <01000000>.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">NSData+Util.h</code><br />
+		<code class="declared-in-ref">NSData+Conversion.h</code><br />
 	</div>				
 	
 	
@@ -872,7 +315,7 @@ Note: Limited to 8 bytes or less because it returns as an unsigned long.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">NSData+Util.h</code><br />
+		<code class="declared-in-ref">NSData+Conversion.h</code><br />
 	</div>				
 	
 	
@@ -932,7 +375,7 @@ Note: Limited to 8 bytes or less because it returns as an unsigned long.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">NSData+Util.h</code><br />
+		<code class="declared-in-ref">NSData+Conversion.h</code><br />
 	</div>				
 	
 	
@@ -969,20 +412,11 @@ Note: Limited to 8 bytes or less because it returns as an unsigned long.</p>
 	
 	
 	
-	<div class="method-subsection see-also-section">
-		<h4 class="method-subtitle">See Also</h4>
-		<ul>
-			
-			<li><code><p><a href="#//api/name/intDataInRange:">&ndash; intDataInRange:</a></p></code></li>
-			
-		</ul>
-	</div>
-	
 	
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">NSData+Util.h</code><br />
+		<code class="declared-in-ref">NSData+Conversion.h</code><br />
 	</div>				
 	
 	
@@ -1025,8 +459,6 @@ Note: Limited to 8 bytes or less because it returns as an unsigned long.</p>
 			
 			<li><code><p><a href="#//api/name/toStringWithLength:">&ndash; toStringWithLength:</a></p></code></li>
 			
-			<li><code><p><a href="#//api/name/stringDataInRange:">&ndash; stringDataInRange:</a></p></code></li>
-			
 			<li><code><p><a href="#//api/name/toChar">&ndash; toChar</a></p></code></li>
 			
 			<li><code><p><a href="#//api/name/toCharWithLength:">&ndash; toCharWithLength:</a></p></code></li>
@@ -1038,7 +470,7 @@ Note: Limited to 8 bytes or less because it returns as an unsigned long.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">NSData+Util.h</code><br />
+		<code class="declared-in-ref">NSData+Conversion.h</code><br />
 	</div>				
 	
 	
@@ -1102,7 +534,7 @@ Note: Limited to 8 bytes or less because it returns as an unsigned long.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">NSData+Util.h</code><br />
+		<code class="declared-in-ref">NSData+Conversion.h</code><br />
 	</div>				
 	
 	
@@ -1121,7 +553,7 @@ Note: Limited to 8 bytes or less because it returns as an unsigned long.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 bsmt. All rights reserved. (Last updated: 2012-11-09)</span><br />
+						<p><span class="copyright">&copy; 2012 bsmt. All rights reserved. (Last updated: 2012-11-25)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
 						

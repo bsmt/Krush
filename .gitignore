@@ -5,3 +5,4 @@
 /Krush.xcodeproj/
 /Krush/
 /Tests/
+*.DS_Store

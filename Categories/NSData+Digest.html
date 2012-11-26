@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>Binary Class Reference</title>
+		<title>NSData(Digest) Category Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
@@ -17,7 +17,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">Binary Class Reference</h1>
+				<h1 class="hideInXcode">NSData(Digest) Category Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -38,24 +38,15 @@
 	
 	
 	
-	<option value="properties">Properties</option>
-	
-	<option value="//api/name/binary">&nbsp;&nbsp;&nbsp;&nbsp;binary</option>
-	
-	<option value="//api/name/machs">&nbsp;&nbsp;&nbsp;&nbsp;machs</option>
-	
-	<option value="//api/name/path">&nbsp;&nbsp;&nbsp;&nbsp;path</option>
-	
-	
 	
 	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/initWithBinaryAtPath:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithBinaryAtPath:</option>
+	<option value="//api/name/MD5Digest">&nbsp;&nbsp;&nbsp;&nbsp;- MD5Digest</option>
 	
-	<option value="//api/name/parseBinary">&nbsp;&nbsp;&nbsp;&nbsp;- parseBinary</option>
+	<option value="//api/name/MD5HexDigest">&nbsp;&nbsp;&nbsp;&nbsp;- MD5HexDigest</option>
 	
 	
 	
@@ -73,25 +64,11 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Initialization">Initialization</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Actions">Actions</a></span></li>
-	
 </ul></li>
 
 
 
 
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/binary">binary</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/machs">machs</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/path">path</a></span></li>
-	
-</ul></li>
 
 
 
@@ -99,9 +76,9 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithBinaryAtPath:">initWithBinaryAtPath:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/MD5Digest">MD5Digest</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parseBinary">parseBinary</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/MD5HexDigest">MD5HexDigest</a></span></li>
 	
 </ul></li>
 
@@ -110,7 +87,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="Binary Class Reference" name="top"></a>
+				<a title="NSData(Digest) Category Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -119,18 +96,15 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">Binary Class Reference</h1>
+						<h1 class="title title-header">NSData(Digest) Category Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">NSObject</td>
-</tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">Binary.h</td>
+	<td class="specification-value">NSData+Digest.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -140,9 +114,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Main class for abstracting binaries.</p>
-
-<p>It contains one or more <a href="../Classes/MachO.html">MachO</a> objects that contain code for each architecture supported by the <a href="#//api/name/binary">binary</a>.</p>
+						<p>An NSData category that hashes the data with MD5.</p>
 					</div>
 					
 					
@@ -155,57 +127,20 @@
 						
 						
 						
-						<h3 class="subsubtitle task-title">Other Methods</h3>
+						
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/path">&nbsp;&nbsp;path</a></code>
-		<span class="tooltip"><p>Path to the <a href="#//api/name/binary">binary</a> to be parsed.</p></span>
+		<code><a href="#//api/name/MD5Digest">&ndash;&nbsp;MD5Digest</a></code>
+		<span class="tooltip"><p>Hashes the NSData as MD5.</p></span>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/binary">&nbsp;&nbsp;binary</a></code>
-		<span class="tooltip"><p>Binary contents.</p></span>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/machs">&nbsp;&nbsp;machs</a></code>
-		<span class="tooltip"><p>Array containing <a href="../Classes/MachO.html">MachO</a> objects, one for each architecture.</p></span>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li>
-						</ul>
-						
-						
-						<a title="Initialization" name="task_Initialization"></a>
-						<h3 class="subsubtitle task-title">Initialization</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/initWithBinaryAtPath:">&ndash;&nbsp;initWithBinaryAtPath:</a></code>
-		<span class="tooltip"><p>Make a new Binary object from one at the given <a href="#//api/name/path">path</a>.</p></span>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="Actions" name="task_Actions"></a>
-						<h3 class="subsubtitle task-title">Actions</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/parseBinary">&ndash;&nbsp;parseBinary</a></code>
-		<span class="tooltip"><p>Gather all required information from the Mach Objects inside the <a href="#//api/name/binary">binary</a>.</p></span>
+		<code><a href="#//api/name/MD5HexDigest">&ndash;&nbsp;MD5HexDigest</a></code>
+		<span class="tooltip"><p>Hex representation of the NSData&rsquo;s md5sum.</p></span>
 	</span>
 	
 	
@@ -217,120 +152,6 @@
 					
 					
 					
-					
-					<div class="section section-methods">
-						<a title="Properties" name="properties"></a>
-						<h2 class="subtitle subtitle-methods">Properties</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/binary" title="binary"></a>
-	<h3 class="subsubtitle method-title">binary</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Binary contents.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property NSData *binary</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">Binary.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/machs" title="machs"></a>
-	<h3 class="subsubtitle method-title">machs</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Array containing <a href="../Classes/MachO.html">MachO</a> objects, one for each architecture.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property NSMutableArray *machs</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">Binary.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/path" title="path"></a>
-	<h3 class="subsubtitle method-title">path</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Path to the <a href="#//api/name/binary">binary</a> to be parsed.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property NSURL *path</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">Binary.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-					</div>
 					
 					
 					
@@ -341,41 +162,36 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/initWithBinaryAtPath:" title="initWithBinaryAtPath:"></a>
-	<h3 class="subsubtitle method-title">initWithBinaryAtPath:</h3>
+	<a name="//api/name/MD5Digest" title="MD5Digest"></a>
+	<h3 class="subsubtitle method-title">MD5Digest</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Make a new Binary object from one at the given <a href="#//api/name/path">path</a>.</p>
+		<p>Hashes the NSData as MD5.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (id)initWithBinaryAtPath:(NSString *)<em>path</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (NSData *)MD5Digest</code></div>
 
     
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>path</em></dt>
-			<dd><p>Path to the target <a href="#//api/name/binary">binary</a>. Can contain tildes.</p></dd>
-		</dl>
-		
-	</div>
 	
 	
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>Initialized Binary object that has been parsed for all <a href="../Classes/MachO.html">MachO</a> information.</p>
+		<p>The md5sum of the data.</p>
 	</div>
 	
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>MD5 utilities were taken from <a href="https://github.com/siuying/NSData-MD5">https://github.com/siuying/NSData-MD5</a></p>
+	</div>
 	
 	
 	
@@ -385,29 +201,34 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">Binary.h</code><br />
+		<code class="declared-in-ref">NSData+Digest.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/parseBinary" title="parseBinary"></a>
-	<h3 class="subsubtitle method-title">parseBinary</h3>
+	<a name="//api/name/MD5HexDigest" title="MD5HexDigest"></a>
+	<h3 class="subsubtitle method-title">MD5HexDigest</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Gather all required information from the Mach Objects inside the <a href="#//api/name/binary">binary</a>.</p>
+		<p>Hex representation of the NSData&rsquo;s md5sum.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)parseBinary</code></div>
+	<div class="method-subsection method-declaration"><code>- (NSString *)MD5HexDigest</code></div>
 
     
 	
 	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The md5sum of the data in a hex string.</p>
+	</div>
 	
 	
 	
@@ -421,7 +242,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">Binary.h</code><br />
+		<code class="declared-in-ref">NSData+Digest.h</code><br />
 	</div>				
 	
 	

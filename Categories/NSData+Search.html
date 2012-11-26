@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>nlist64 Class Reference</title>
+		<title>NSData(Search) Category Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
@@ -17,7 +17,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">nlist64 Class Reference</h1>
+				<h1 class="hideInXcode">NSData(Search) Category Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -26,6 +26,8 @@
 				<li id="jumpto_button" role="navigation">
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
 	
 	
 	
@@ -36,26 +38,13 @@
 	
 	
 	
-	<option value="properties">Properties</option>
-	
-	<option value="//api/name/desc">&nbsp;&nbsp;&nbsp;&nbsp;desc</option>
-	
-	<option value="//api/name/sect">&nbsp;&nbsp;&nbsp;&nbsp;sect</option>
-	
-	<option value="//api/name/stringIndex">&nbsp;&nbsp;&nbsp;&nbsp;stringIndex</option>
-	
-	<option value="//api/name/type">&nbsp;&nbsp;&nbsp;&nbsp;type</option>
-	
-	<option value="//api/name/value">&nbsp;&nbsp;&nbsp;&nbsp;value</option>
-	
-	
 	
 	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/initWithStruct:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithStruct:</option>
+	<option value="//api/name/rangesOfData:options:range:">&nbsp;&nbsp;&nbsp;&nbsp;- rangesOfData:options:range:</option>
 	
 	
 	
@@ -66,6 +55,8 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
@@ -77,27 +68,13 @@
 
 
 
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/desc">desc</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sect">sect</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringIndex">stringIndex</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/type">type</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/value">value</a></span></li>
-	
-</ul></li>
-
 
 
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithStruct:">initWithStruct:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/rangesOfData:options:range:">rangesOfData:options:range:</a></span></li>
 	
 </ul></li>
 
@@ -106,7 +83,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="nlist64 Class Reference" name="top"></a>
+				<a title="NSData(Search) Category Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -115,21 +92,26 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">nlist64 Class Reference</h1>
+						<h1 class="title title-header">NSData(Search) Category Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">NSObject</td>
-</tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">SymtabCommand.h</td>
+	<td class="specification-value">NSData+Search.h</td>
 </tr>
 						</tbody></table></div>
 					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>An NSData category that allows searching that&rsquo;s more advanced than the methods provided by Foundation.</p>
+					</div>
 					
 					
 					
@@ -146,43 +128,8 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/stringIndex">&nbsp;&nbsp;stringIndex</a></code>
-		
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/type">&nbsp;&nbsp;type</a></code>
-		
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/sect">&nbsp;&nbsp;sect</a></code>
-		
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/desc">&nbsp;&nbsp;desc</a></code>
-		
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/value">&nbsp;&nbsp;value</a></code>
-		
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/initWithStruct:">&ndash;&nbsp;initWithStruct:</a></code>
-		
+		<code><a href="#//api/name/rangesOfData:options:range:">&ndash;&nbsp;rangesOfData:options:range:</a></code>
+		<span class="tooltip"><p>Looks for the specified search data and returns the ranges of all occurances it finds.</p></span>
 	</span>
 	
 	
@@ -195,67 +142,6 @@
 					
 					
 					
-					<div class="section section-methods">
-						<a title="Properties" name="properties"></a>
-						<h2 class="subtitle subtitle-methods">Properties</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/desc" title="desc"></a>
-	<h3 class="subsubtitle method-title">desc</h3>
-	
-	
-
-	<div class="method-subsection method-declaration"><code>@property uint16_t desc</code></div>
-
-    
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/sect" title="sect"></a>
-	<h3 class="subsubtitle method-title">sect</h3>
-	
-	
-
-	<div class="method-subsection method-declaration"><code>@property uint8_t sect</code></div>
-
-    
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/stringIndex" title="stringIndex"></a>
-	<h3 class="subsubtitle method-title">stringIndex</h3>
-	
-	
-
-	<div class="method-subsection method-declaration"><code>@property uint32_t stringIndex</code></div>
-
-    
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/type" title="type"></a>
-	<h3 class="subsubtitle method-title">type</h3>
-	
-	
-
-	<div class="method-subsection method-declaration"><code>@property uint8_t type</code></div>
-
-    
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/value" title="value"></a>
-	<h3 class="subsubtitle method-title">value</h3>
-	
-	
-
-	<div class="method-subsection method-declaration"><code>@property unsigned long value</code></div>
-
-    
-</div>
-						
-					</div>
-					
 					
 					
 					
@@ -265,14 +151,69 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/initWithStruct:" title="initWithStruct:"></a>
-	<h3 class="subsubtitle method-title">initWithStruct:</h3>
+	<a name="//api/name/rangesOfData:options:range:" title="rangesOfData:options:range:"></a>
+	<h3 class="subsubtitle method-title">rangesOfData:options:range:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Looks for the specified search data and returns the ranges of all occurances it finds.</p>
+	</div>		
+	
+    
 
-	<div class="method-subsection method-declaration"><code>- (nlist64 *)initWithStruct:(struct nlist_64)<em>nl</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (NSArray *)rangesOfData:(NSData *)<em>search</em> options:(NSDataSearchOptions)<em>option</em> range:(NSRange)<em>searchRange</em></code></div>
 
     
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>search</em></dt>
+			<dd><p>The data to search for.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>option</em></dt>
+			<dd><p>NSDataSearchOptions that can be ORed together.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>range</em></dt>
+			<dd><p>The range within the target data to search in.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An array of NSValue objects that contain an NSRange of an occurance of the search data.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns NULL if no occurances were found.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSData+Search.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 					</div>

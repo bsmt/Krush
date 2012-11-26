@@ -62,7 +62,7 @@
 {
     NSData *target_contents = [NSData dataWithContentsOfURL:[self target]];
     NSRange searchRange = NSMakeRange(0, [target_contents length]);
-    NSArray *resultRanges = [target_contents rangesOfData:search options:NULL range:searchRange];
+    NSArray *resultRanges = [target_contents rangesOfData:search options:0 range:searchRange];
     if (!resultRanges)
     {
         return FALSE; // data not found

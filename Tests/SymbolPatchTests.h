@@ -1,5 +1,5 @@
 //
-//  BinaryTests.h
+//  SymbolPatchTests.h
 //
 //  Created by ████
 //

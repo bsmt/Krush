@@ -1,10 +1,10 @@
 //
-//  BinaryTests.m
+//  SymbolPatchTests.m
 //
 //  Created by ████
 //
 
-#import "SymbolTests.h"
+#import "SymbolPatchTests.h"
 
 @implementation SymbolTests
 

@@ -39,8 +39,8 @@
     NSData *original = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"test1" ofType:@""]];
     NSData *patched = [NSData dataWithContentsOfFile:@"/tmp/test1"];
     
-    GHAssertEqualStrings([original MD5HexDigest], @"b695e44a3dc25f4bf22cfadc3b7014a2", @"Unpatched binary's md5 doesn't match.");
-    GHAssertEqualStrings([patched MD5HexDigest], @"cea94a2bf13b9d5a7b0f690cc62e41b4", @"Patched binary's md5 doesn't match.");
+    GHAssertEqualStrings([original MD5HexDigest], @"48812b45acf945d54c7b0a48f5cfc53a", @"Unpatched binary's md5 doesn't match.");
+    GHAssertEqualStrings([patched MD5HexDigest], @"112d8883916b98d97cb0ae375f60950e", @"Patched binary's md5 doesn't match.");
 }
 
 @end

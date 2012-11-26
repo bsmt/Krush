@@ -4,7 +4,7 @@
 //  Created by ████
 //
 
-#import "SymbolPatchTests.h"
+#import "SymbolTests.h"
 
 @implementation SymbolTests
 

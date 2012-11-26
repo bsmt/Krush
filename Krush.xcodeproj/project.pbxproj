@@ -51,8 +51,10 @@
 		46716C68161E9371005E60E8 /* Krush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4602AFCF161E3AA1003C9EAC /* Krush.framework */; };
 		4677743016632A91004B1C18 /* NSData+Search.h in Headers */ = {isa = PBXBuildFile; fileRef = 4677742E16632A91004B1C18 /* NSData+Search.h */; };
 		4677743116632A91004B1C18 /* NSData+Search.m in Sources */ = {isa = PBXBuildFile; fileRef = 4677742F16632A91004B1C18 /* NSData+Search.m */; };
+		4677743516632F7A004B1C18 /* HexSearchPatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4677743416632F7A004B1C18 /* HexSearchPatchTests.m */; };
+		467774571663340E004B1C18 /* test2 in Resources */ = {isa = PBXBuildFile; fileRef = 467774561663340E004B1C18 /* test2 */; };
 		4699B556163F391E00DE2608 /* test1 in Resources */ = {isa = PBXBuildFile; fileRef = 4699B555163F391E00DE2608 /* test1 */; };
-		4699B55B163F399900DE2608 /* SymbolPatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4699B55A163F399900DE2608 /* SymbolPatchTests.m */; };
+		4699B55B163F399900DE2608 /* SymbolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4699B55A163F399900DE2608 /* SymbolTests.m */; };
 		46BF2C41164095EC00714C45 /* PatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BF2C40164095EC00714C45 /* PatchTests.m */; };
 		46C5EBE5161E746900064436 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4602AFD2161E3AA1003C9EAC /* Cocoa.framework */; };
 		46C5EBEB161E746900064436 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46C5EBE9161E746900064436 /* InfoPlist.strings */; };
@@ -134,9 +136,12 @@
 		463902101662CEB500420B39 /* NSData+Endian.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Endian.m"; sourceTree = "<group>"; };
 		4677742E16632A91004B1C18 /* NSData+Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Search.h"; sourceTree = "<group>"; };
 		4677742F16632A91004B1C18 /* NSData+Search.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Search.m"; sourceTree = "<group>"; };
+		4677743316632F7A004B1C18 /* HexSearchPatchTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexSearchPatchTests.h; sourceTree = "<group>"; };
+		4677743416632F7A004B1C18 /* HexSearchPatchTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexSearchPatchTests.m; sourceTree = "<group>"; };
+		467774561663340E004B1C18 /* test2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = test2; sourceTree = "<group>"; };
 		4699B555163F391E00DE2608 /* test1 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = test1; sourceTree = "<group>"; };
-		4699B559163F399900DE2608 /* SymbolPatchTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymbolPatchTests.h; sourceTree = "<group>"; };
-		4699B55A163F399900DE2608 /* SymbolPatchTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SymbolPatchTests.m; sourceTree = "<group>"; };
+		4699B559163F399900DE2608 /* SymbolTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymbolTests.h; sourceTree = "<group>"; };
+		4699B55A163F399900DE2608 /* SymbolTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SymbolTests.m; sourceTree = "<group>"; };
 		46BF2C3F164095EC00714C45 /* PatchTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatchTests.h; sourceTree = "<group>"; };
 		46BF2C40164095EC00714C45 /* PatchTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatchTests.m; sourceTree = "<group>"; };
 		46C5EBE3161E746900064436 /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -319,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				4699B555163F391E00DE2608 /* test1 */,
+				467774561663340E004B1C18 /* test2 */,
 			);
 			name = "Test Binaries";
 			sourceTree = "<group>";
@@ -328,8 +334,10 @@
 			children = (
 				46C5EBE7161E746900064436 /* Supporting Files */,
 				4699B558163F392100DE2608 /* Test Binaries */,
-				4699B559163F399900DE2608 /* SymbolPatchTests.h */,
-				4699B55A163F399900DE2608 /* SymbolPatchTests.m */,
+				4699B559163F399900DE2608 /* SymbolTests.h */,
+				4699B55A163F399900DE2608 /* SymbolTests.m */,
+				4677743316632F7A004B1C18 /* HexSearchPatchTests.h */,
+				4677743416632F7A004B1C18 /* HexSearchPatchTests.m */,
 				46BF2C3F164095EC00714C45 /* PatchTests.h */,
 				46BF2C40164095EC00714C45 /* PatchTests.m */,
 			);
@@ -476,6 +484,7 @@
 			files = (
 				46C5EBEB161E746900064436 /* InfoPlist.strings in Resources */,
 				4699B556163F391E00DE2608 /* test1 in Resources */,
+				467774571663340E004B1C18 /* test2 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,8 +523,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				46C5EC15161E774000064436 /* GHUnitTestMain.m in Sources */,
-				4699B55B163F399900DE2608 /* SymbolPatchTests.m in Sources */,
+				4699B55B163F399900DE2608 /* SymbolTests.m in Sources */,
 				46BF2C41164095EC00714C45 /* PatchTests.m in Sources */,
+				4677743516632F7A004B1C18 /* HexSearchPatchTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,7 @@
 #import "MachO+Symbol.h"
 #import "Assembler.h"
 #import "NSData+Split.h"
+#import "NSData+Search.h"
 
 /** Patches Binary objects and other types of files. */
 
@@ -66,13 +67,5 @@
  @return The patch status. TRUE = success, FALSE = failure.
  */
 -(BOOL)replaceString:(NSString *)search with:(NSString *)replace;
-
-/** Replace all occurances of the given search data with support for wildcards while searching.
- 
- @param search The data to search for. To specify a wildcard, use the byte 0x2a (ASCII encoded *).
- @param replace The data that will replace any matches.
- @return The patch status. TRUE = success, FALSE = failure.
- */
--(BOOL)wildcardReplaceData:(NSData *)search with:(NSData *)replace;
 
 @end

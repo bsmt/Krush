@@ -62,22 +62,26 @@
 {
     NSData *target_contents = [NSData dataWithContentsOfURL:[self target]];
     NSRange searchRange = NSMakeRange(0, [target_contents length]);
-    NSRange dataRange = [target_contents rangeOfData:search options:0 range:searchRange];
-    
-    if (dataRange.location == NSNotFound)
+    NSArray *resultRanges = [target_contents rangesOfData:search options:NULL range:searchRange];
+    if (!resultRanges)
     {
         return FALSE; // data not found
     }
-    else
+    
+    for (NSValue *rangeObj in resultRanges)
     {
+        NSRange range;
+        [rangeObj getValue:&range];
+        
         NSError *error = NULL;
         NSFileHandle *handle = [NSFileHandle fileHandleForWritingToURL:[self target] error:&error];
-        [handle seekToFileOffset:dataRange.location];
+        [handle seekToFileOffset:range.location];
         [handle writeData:replace];
         
         [handle closeFile];
-        return TRUE;
     }
+    
+    return TRUE;
 }
 
 -(BOOL)replaceString:(NSString *)search with:(NSString *)replace
@@ -87,37 +91,6 @@
     
     BOOL result = [self replaceData:search_data with:replace_data];
     return result;
-}
-
--(BOOL)wildcardReplaceData:(NSData *)search with:(NSData *)replace
-{
-    NSData *target_contents = [NSData dataWithContentsOfURL:[self target]];
-    NSArray *parts = [search componentsSeparatedByByte:0x2a]; // wildcard indicator is 0x2a (* ascii)
-    
-    int index = 0; // our position in the patch data
-    for (NSData *component in parts)
-    {
-        NSRange dataRange = [target_contents rangeOfData:component options:0
-                                                   range:NSMakeRange(0, [target_contents length])];
-        if (dataRange.location == NSNotFound)
-        {
-            return FALSE; // didn't find that part
-        }
-        else
-        {
-            // add 1 to length to cover the skipped wildcard
-            NSData *patchData = [replace subdataWithRange:NSMakeRange(index, (dataRange.length + 1))];
-            
-            NSError *error = NULL;
-            NSFileHandle *handle = [NSFileHandle fileHandleForWritingToURL:[self target] error:&error];
-            [handle seekToFileOffset:dataRange.location];
-            [handle writeData:patchData];
-            
-            [handle closeFile];
-        }
-    }
-
-    return TRUE;
 }
 
 @end

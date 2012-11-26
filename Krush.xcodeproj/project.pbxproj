@@ -49,6 +49,8 @@
 		463902111662CEB500420B39 /* NSData+Endian.h in Headers */ = {isa = PBXBuildFile; fileRef = 4639020F1662CEB500420B39 /* NSData+Endian.h */; };
 		463902121662CEB500420B39 /* NSData+Endian.m in Sources */ = {isa = PBXBuildFile; fileRef = 463902101662CEB500420B39 /* NSData+Endian.m */; };
 		46716C68161E9371005E60E8 /* Krush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4602AFCF161E3AA1003C9EAC /* Krush.framework */; };
+		4677743016632A91004B1C18 /* NSData+Search.h in Headers */ = {isa = PBXBuildFile; fileRef = 4677742E16632A91004B1C18 /* NSData+Search.h */; };
+		4677743116632A91004B1C18 /* NSData+Search.m in Sources */ = {isa = PBXBuildFile; fileRef = 4677742F16632A91004B1C18 /* NSData+Search.m */; };
 		4699B556163F391E00DE2608 /* test1 in Resources */ = {isa = PBXBuildFile; fileRef = 4699B555163F391E00DE2608 /* test1 */; };
 		4699B55B163F399900DE2608 /* SymbolPatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4699B55A163F399900DE2608 /* SymbolPatchTests.m */; };
 		46BF2C41164095EC00714C45 /* PatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BF2C40164095EC00714C45 /* PatchTests.m */; };
@@ -130,6 +132,8 @@
 		4639020C1662CE0200420B39 /* NSData+Split.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Split.m"; sourceTree = "<group>"; };
 		4639020F1662CEB500420B39 /* NSData+Endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Endian.h"; sourceTree = "<group>"; };
 		463902101662CEB500420B39 /* NSData+Endian.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Endian.m"; sourceTree = "<group>"; };
+		4677742E16632A91004B1C18 /* NSData+Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Search.h"; sourceTree = "<group>"; };
+		4677742F16632A91004B1C18 /* NSData+Search.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Search.m"; sourceTree = "<group>"; };
 		4699B555163F391E00DE2608 /* test1 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = test1; sourceTree = "<group>"; };
 		4699B559163F399900DE2608 /* SymbolPatchTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymbolPatchTests.h; sourceTree = "<group>"; };
 		4699B55A163F399900DE2608 /* SymbolPatchTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SymbolPatchTests.m; sourceTree = "<group>"; };
@@ -248,6 +252,8 @@
 				463902081662CD1300420B39 /* NSData+Digest.m */,
 				4639020B1662CE0200420B39 /* NSData+Split.h */,
 				4639020C1662CE0200420B39 /* NSData+Split.m */,
+				4677742E16632A91004B1C18 /* NSData+Search.h */,
+				4677742F16632A91004B1C18 /* NSData+Search.m */,
 			);
 			name = "NSData Categories";
 			sourceTree = "<group>";
@@ -368,6 +374,7 @@
 				463902091662CD1300420B39 /* NSData+Digest.h in Headers */,
 				4639020D1662CE0200420B39 /* NSData+Split.h in Headers */,
 				463902111662CEB500420B39 /* NSData+Endian.h in Headers */,
+				4677743016632A91004B1C18 /* NSData+Search.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +505,7 @@
 				4639020A1662CD1300420B39 /* NSData+Digest.m in Sources */,
 				4639020E1662CE0200420B39 /* NSData+Split.m in Sources */,
 				463902121662CEB500420B39 /* NSData+Endian.m in Sources */,
+				4677743116632A91004B1C18 /* NSData+Search.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -4,9 +4,9 @@
 //  Created by ████
 //
 
-#import "PatchTests.h"
+#import "SymbolPatchTests.h"
 
-@implementation PatchTests
+@implementation SymbolPatchTests
 
 -(void)setUp
 {

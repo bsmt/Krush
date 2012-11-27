@@ -1,5 +1,5 @@
 //
-//  PatchTests.h
+//  SymbolPatchTests.h
 //
 //  Created by ████
 //
@@ -10,7 +10,7 @@
 #import <Krush/Patcher.h>
 #import "NSData+Digest.h" // I guess we can't get this from Krush?
 
-@interface PatchTests : GHTestCase
+@interface SymbolPatchTests : GHTestCase
 
 @property Patcher *patcher;
 

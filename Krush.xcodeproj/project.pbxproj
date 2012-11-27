@@ -55,7 +55,7 @@
 		467774571663340E004B1C18 /* test2 in Resources */ = {isa = PBXBuildFile; fileRef = 467774561663340E004B1C18 /* test2 */; };
 		4699B556163F391E00DE2608 /* test1 in Resources */ = {isa = PBXBuildFile; fileRef = 4699B555163F391E00DE2608 /* test1 */; };
 		4699B55B163F399900DE2608 /* SymbolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4699B55A163F399900DE2608 /* SymbolTests.m */; };
-		46BF2C41164095EC00714C45 /* PatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BF2C40164095EC00714C45 /* PatchTests.m */; };
+		46BF2C41164095EC00714C45 /* SymbolPatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BF2C40164095EC00714C45 /* SymbolPatchTests.m */; };
 		46C5EBE5161E746900064436 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4602AFD2161E3AA1003C9EAC /* Cocoa.framework */; };
 		46C5EBEB161E746900064436 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46C5EBE9161E746900064436 /* InfoPlist.strings */; };
 		46C5EBFD161E74A800064436 /* GHUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C5EBFC161E74A800064436 /* GHUnit.framework */; };
@@ -142,8 +142,8 @@
 		4699B555163F391E00DE2608 /* test1 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = test1; sourceTree = "<group>"; };
 		4699B559163F399900DE2608 /* SymbolTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymbolTests.h; sourceTree = "<group>"; };
 		4699B55A163F399900DE2608 /* SymbolTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SymbolTests.m; sourceTree = "<group>"; };
-		46BF2C3F164095EC00714C45 /* PatchTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatchTests.h; sourceTree = "<group>"; };
-		46BF2C40164095EC00714C45 /* PatchTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatchTests.m; sourceTree = "<group>"; };
+		46BF2C3F164095EC00714C45 /* SymbolPatchTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymbolPatchTests.h; sourceTree = "<group>"; };
+		46BF2C40164095EC00714C45 /* SymbolPatchTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SymbolPatchTests.m; sourceTree = "<group>"; };
 		46C5EBE3161E746900064436 /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46C5EBE8161E746900064436 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		46C5EBEA161E746900064436 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -338,8 +338,8 @@
 				4699B55A163F399900DE2608 /* SymbolTests.m */,
 				4677743316632F7A004B1C18 /* HexSearchPatchTests.h */,
 				4677743416632F7A004B1C18 /* HexSearchPatchTests.m */,
-				46BF2C3F164095EC00714C45 /* PatchTests.h */,
-				46BF2C40164095EC00714C45 /* PatchTests.m */,
+				46BF2C3F164095EC00714C45 /* SymbolPatchTests.h */,
+				46BF2C40164095EC00714C45 /* SymbolPatchTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -524,7 +524,7 @@
 			files = (
 				46C5EC15161E774000064436 /* GHUnitTestMain.m in Sources */,
 				4699B55B163F399900DE2608 /* SymbolTests.m in Sources */,
-				46BF2C41164095EC00714C45 /* PatchTests.m in Sources */,
+				46BF2C41164095EC00714C45 /* SymbolPatchTests.m in Sources */,
 				4677743516632F7A004B1C18 /* HexSearchPatchTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

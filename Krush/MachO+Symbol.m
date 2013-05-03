@@ -11,7 +11,7 @@
 -(unsigned long)virtualOffsetForSymbol:(NSString *)sym
 {
     NSDictionary *symbols = [self findAllSymbols];
-    return (unsigned int)symbols[sym];
+    return symbols[sym];
 }
 
 -(unsigned long)realOffsetForSymbol:(NSString *)sym

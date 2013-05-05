@@ -43,7 +43,7 @@
         }
 
         unsigned long symtab_location = [mach convertVirtualOffset:mod.symtab];  // all we care about
-        struct objc_symtab *sym = (struct objc_symtab *)((char *)[[mach data] bytes] + symtab_location);
+        struct objc_symtab *sym = (struct objc_symtab *)([[mach data] bytes] + symtab_location);
         NSMutableArray *defs = [NSMutableArray array];
         
         // read definitions

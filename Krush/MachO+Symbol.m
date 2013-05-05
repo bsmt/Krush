@@ -33,7 +33,7 @@
         if (self.arch == CPU_TYPE_I386)
         {
             struct nlist nl;
-            nl = *(struct nlist *)((char *)[[self data] bytes] + nlistOff);
+            nl = *(struct nlist *)([[self data] bytes] + nlistOff);
             nlist32 *nlist = [[nlist32 alloc] initWithStruct:nl];
             nlistOff += sizeof(struct nlist);
             [[[self symtab] nlists] addObject:nlist];
@@ -53,7 +53,7 @@
         else if (self.arch == CPU_TYPE_X86_64)
         {
             struct nlist_64 nl;
-            nl = *(struct nlist_64 *)((char *)[[self data] bytes] + nlistOff);
+            nl = *(struct nlist_64 *)([[self data] bytes] + nlistOff);
             nlist64 *nlist = [[nlist64 alloc] initWithStruct:nl];
             nlistOff += sizeof(struct nlist_64);
             [[[self symtab] nlists] addObject:nlist];

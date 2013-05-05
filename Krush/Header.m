@@ -59,14 +59,14 @@
     if (magic == MH_CIGAM)
     {
         struct mach_header mach;
-        mach = *(struct mach_header *)((char *)[data bytes] + off);
+        mach = *(struct mach_header *)([data bytes] + off);
         Header *header = [[Header alloc] initWith32Struct:mach];
         return header;
     }
     else if (magic == MH_CIGAM_64)
     {
         struct mach_header_64 mach;
-        mach = *(struct mach_header_64 *)((char *)[data bytes] + off);
+        mach = *(struct mach_header_64 *)([data bytes] + off);
         Header *header = [[Header alloc] initWith64Struct:mach];
         return header;
     }

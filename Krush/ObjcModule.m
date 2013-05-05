@@ -44,7 +44,7 @@
     
     while (actualOffset < end)
     {
-        struct objc_module *mod_struct = (struct objc_module *)((char *)[[mach data] bytes] + actualOffset);
+        struct objc_module *mod_struct = (struct objc_module *)([[mach data] bytes] + actualOffset);
         ObjcModule *mod = [ObjcModule moduleFromStruct:*mod_struct];
         [modules addObject:mod];
         actualOffset += sizeof(struct objc_module);

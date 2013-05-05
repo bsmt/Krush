@@ -18,7 +18,7 @@
     
     unsigned long real_offset = [mach convertVirtualOffset:offset];
     NSMutableArray *methods = [NSMutableArray array];
-    struct objc_method_list *method_list = (struct objc_method_list *)((char *)[[mach data] bytes] + real_offset);
+    struct objc_method_list *method_list = (struct objc_method_list *)([[mach data] bytes] + real_offset);
     real_offset += sizeof(struct objc_method_list);
         
     int i = 0;
@@ -26,14 +26,14 @@
     {
         if (mach.arch == CPU_TYPE_I386)
         {
-            struct objc_method *method_struct = (struct objc_method *)((char *)[[mach data] bytes] + real_offset);
+            struct objc_method *method_struct = (struct objc_method *)([[mach data] bytes] + real_offset);
             real_offset += sizeof(struct objc_method);
             ObjcMethod *method = [ObjcMethod methodFromStruct:*method_struct inMachO:mach type:type];
             [methods addObject:method];
         }
         else if (mach.arch == CPU_TYPE_X86_64)
         {
-            struct objc64_method *method_struct = (struct objc64_method *)((char *)[[mach data] bytes] + real_offset);
+            struct objc64_method *method_struct = (struct objc64_method *)([[mach data] bytes] + real_offset);
             real_offset += sizeof(struct objc64_method);
             ObjcMethod *method = [ObjcMethod objc2MethodFromStruct:*method_struct inMachO:mach type:type];
             [methods addObject:method];

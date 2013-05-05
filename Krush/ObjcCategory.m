@@ -42,7 +42,7 @@
     }
     
     unsigned long real_offset = [mach convertVirtualOffset:offset];
-    struct objc_catagory *cat_struct = (struct objc_catagory *)((char *)[[mach data] bytes] + real_offset);
+    struct objc_catagory *cat_struct = (struct objc_catagory *)([[mach data] bytes] + real_offset);
     
     unsigned long cat_name_offset = [mach convertVirtualOffset:cat_struct->category_name] - 1;
     category.category_name = [[NSString alloc] initWithData:[[mach data] readTillNullAtOffset:cat_name_offset]
@@ -77,7 +77,7 @@
     }
     
     unsigned long real_offset = [mach convertVirtualOffset:offset];
-    struct objc64_catagory *cat_struct = (struct objc64_catagory *)((char *)[[mach data] bytes] + real_offset);
+    struct objc64_catagory *cat_struct = (struct objc64_catagory *)([[mach data] bytes] + real_offset);
     
     unsigned long name_offset = [mach convertVirtualOffset:cat_struct->name];
     category.category_name = [[NSString alloc] initWithData:[[mach data] readTillNullAtOffset:name_offset - 1]

@@ -35,7 +35,7 @@
 +(SymtabCommand *)symtabCommandAtOffset:(unsigned int)off inData:(NSData *)binary
 {
     struct symtab_command sym;
-    sym = *(struct symtab_command *)((char *)[binary bytes] + off);
+    sym = *(struct symtab_command *)([binary bytes] + off);
     SymtabCommand *symtab = [[SymtabCommand alloc] initWithStruct:sym];
     symtab.location = off;
     symtab.nlists = [NSMutableArray array];

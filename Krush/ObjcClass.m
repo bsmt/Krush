@@ -36,7 +36,7 @@
     
     ObjcClass *class = [[ObjcClass alloc] init];
     unsigned long real_offset = [mach convertVirtualOffset:offset];
-    struct objc_class *class_struct = (struct objc_class *)((char *)[[mach data] bytes] + real_offset);
+    struct objc_class *class_struct = (struct objc_class *)([[mach data] bytes] + real_offset);
     
     class._isa = class_struct->isa;
     unsigned long superclass_offset = [mach convertVirtualOffset:class_struct->super_class] - 1;
@@ -56,7 +56,7 @@
     
     // find class methods
     unsigned long metaclass_offset = [mach convertVirtualOffset:class._isa]; // metaclass section has class method info
-    struct objc_class *metaclass = (struct objc_class *)((char *)[[mach data] bytes] + metaclass_offset);
+    struct objc_class *metaclass = (struct objc_class *)([[mach data] bytes] + metaclass_offset);
     
     if (metaclass->methods != 0)
     {
@@ -84,7 +84,7 @@
     ObjcClass *class = [[ObjcClass alloc] init];
     
     unsigned long file_offset = [mach convertVirtualOffset:offset];
-    struct objc64_class *class_struct = (struct objc64_class *)((char *)[[mach data] bytes] + file_offset);
+    struct objc64_class *class_struct = (struct objc64_class *)([[mach data] bytes] + file_offset);
     
     class._isa = class_struct->isa;
     
@@ -103,7 +103,7 @@
     class.cache = class_struct->cache;
     // we're ignoring vtable for now...
     
-    struct objc64_class_ro_t *class_data = (struct objc64_class_ro_t *)((char *)[[mach data] bytes] +
+    struct objc64_class_ro_t *class_data = (struct objc64_class_ro_t *)([[mach data] bytes] +
                                                                         [mach convertVirtualOffset:class_struct->data]);
     
     class.version = 0;
@@ -120,8 +120,8 @@
     
     // find class methods
     unsigned long metaclass_offset = [mach convertVirtualOffset:class._isa];
-    struct objc64_class *metaclass = (struct objc64_class *)((char *)[[mach data] bytes] + metaclass_offset);
-    struct objc64_class_ro_t *metaclass_data = (struct objc64_class_ro_t *)((char *)[[mach data] bytes] +
+    struct objc64_class *metaclass = (struct objc64_class *)([[mach data] bytes] + metaclass_offset);
+    struct objc64_class_ro_t *metaclass_data = (struct objc64_class_ro_t *)([[mach data] bytes] +
                                                                             [mach convertVirtualOffset:metaclass->data]);
     
     if (metaclass_data->baseMethods != 0)

@@ -40,14 +40,14 @@
     {
         unsigned int offset = 0;
         struct fat_header fat;
-        fat = *(struct fat_header *)((char *)[binary bytes] + offset);
+        fat = *(struct fat_header *)([binary bytes] + offset);
         fat.nfat_arch = CFSwapInt32(fat.nfat_arch);
         offset += sizeof(struct fat_header);
         
         for (int i = 0; i < fat.nfat_arch; i++)
         {
             struct fat_arch arch;
-            arch = *(struct fat_arch *)((char *)[binary bytes] + offset);
+            arch = *(struct fat_arch *)([binary bytes] + offset);
             arch.cputype = CFSwapInt32(arch.cputype);
             arch.cpusubtype = CFSwapInt32(arch.cpusubtype);
             arch.offset = CFSwapInt32(arch.offset);

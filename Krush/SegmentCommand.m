@@ -46,7 +46,7 @@
 +(SegmentCommand *)segmentCommandAtOffset:(unsigned int)off inData:(NSData *)binary
 {
     struct segment_command seg;
-    seg = *(struct segment_command *)((char *)[binary bytes] + off);
+    seg = *(struct segment_command *)([binary bytes] + off);
     SegmentCommand *cmd = [[SegmentCommand alloc] initWithStruct:seg];
     cmd.location = off;
     cmd.sections = [NSMutableArray array];
@@ -55,7 +55,7 @@
     for (int i = 0; i < cmd.nsects; i++)
     {
         struct section sect;
-        sect = *(struct section *)((char *)[binary bytes] + offset);
+        sect = *(struct section *)([binary bytes] + offset);
         Section *section = [[Section alloc] initWithStruct:sect];
         offset += sizeof(struct section);
         
@@ -167,7 +167,7 @@
 +(SegmentCommand64 *)segment64CommandAtOffset:(unsigned int)off inData:(NSData *)binary
 {
     struct segment_command_64 seg;
-    seg = *(struct segment_command_64 *)((char *)[binary bytes] + off);
+    seg = *(struct segment_command_64 *)([binary bytes] + off);
     SegmentCommand64 *cmd = [[SegmentCommand64 alloc] initWithStruct:seg];
     cmd.location = off;
     cmd.sections = [NSMutableArray array];
@@ -176,7 +176,7 @@
     for (int i = 0; i < cmd.nsects; i++)
     {
         struct section_64 sect;
-        sect = *(struct section_64 *)((char *)[binary bytes] + offset);
+        sect = *(struct section_64 *)([binary bytes] + offset);
         Section64 *section = [[Section64 alloc] initWithStruct:sect];
         offset += sizeof(struct section_64);
         

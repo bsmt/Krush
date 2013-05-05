@@ -68,4 +68,11 @@
  */
 -(BOOL)replaceString:(NSString *)search with:(NSString *)replace;
 
+/** Insert an LC_LOAD_DYLIB command into the MachO headers in the binary.
+ 
+ @param dylibName Name of the dylib with the extension. This assumes the dylib is in @executable_path (MacOS) with the main binary.
+ @return The patch status.
+ */
+-(BOOL)insertLoadDylibCommand:(NSString *)dylibName;
+
 @end

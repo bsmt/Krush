@@ -15,7 +15,7 @@
     NSRange initial = [self rangeOfData:search options:option range:searchRange];
     if (initial.location == NSNotFound)
     {
-        return NULL; // no occurances
+        return [NSArray array]; // no occurances
     }
     
     [ranges addObject:[NSValue value:&initial withObjCType:@encode(NSRange)]];

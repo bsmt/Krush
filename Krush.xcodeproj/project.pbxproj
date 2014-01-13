@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4602AFD3161E3AA1003C9EAC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4602AFD2161E3AA1003C9EAC /* Cocoa.framework */; };
-		4602AFDD161E3AA1003C9EAC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4602AFDB161E3AA1003C9EAC /* InfoPlist.strings */; };
 		4602B00E161E3AB3003C9EAC /* Assembler.h in Headers */ = {isa = PBXBuildFile; fileRef = 4602AFE7161E3AB3003C9EAC /* Assembler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4602B00F161E3AB3003C9EAC /* Assembler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4602AFE8161E3AB3003C9EAC /* Assembler.m */; };
 		4602B010161E3AB3003C9EAC /* Binary.h in Headers */ = {isa = PBXBuildFile; fileRef = 4602AFE9161E3AB3003C9EAC /* Binary.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -57,7 +56,6 @@
 		4699B55B163F399900DE2608 /* SymbolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4699B55A163F399900DE2608 /* SymbolTests.m */; };
 		46BF2C41164095EC00714C45 /* SymbolPatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BF2C40164095EC00714C45 /* SymbolPatchTests.m */; };
 		46C5EBE5161E746900064436 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4602AFD2161E3AA1003C9EAC /* Cocoa.framework */; };
-		46C5EBEB161E746900064436 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46C5EBE9161E746900064436 /* InfoPlist.strings */; };
 		46C5EBFD161E74A800064436 /* GHUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C5EBFC161E74A800064436 /* GHUnit.framework */; };
 		46C5EBFF161E75D400064436 /* GHUnit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 46C5EBFC161E74A800064436 /* GHUnit.framework */; };
 		46C5EC15161E774000064436 /* GHUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C5EC14161E774000064436 /* GHUnitTestMain.m */; };
@@ -93,7 +91,6 @@
 		4602AFD6161E3AA1003C9EAC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4602AFD7161E3AA1003C9EAC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4602AFDA161E3AA1003C9EAC /* Krush-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Krush-Info.plist"; sourceTree = "<group>"; };
-		4602AFDC161E3AA1003C9EAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4602AFDE161E3AA1003C9EAC /* Krush-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Krush-Prefix.pch"; sourceTree = "<group>"; };
 		4602AFE7161E3AB3003C9EAC /* Assembler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assembler.h; sourceTree = "<group>"; };
 		4602AFE8161E3AB3003C9EAC /* Assembler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Assembler.m; sourceTree = "<group>"; };
@@ -146,7 +143,6 @@
 		46BF2C40164095EC00714C45 /* SymbolPatchTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SymbolPatchTests.m; sourceTree = "<group>"; };
 		46C5EBE3161E746900064436 /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46C5EBE8161E746900064436 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
-		46C5EBEA161E746900064436 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		46C5EBEE161E746900064436 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		46C5EBFC161E74A800064436 /* GHUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnit.framework; path = Tests/GHUnit.framework; sourceTree = "<group>"; };
 		46C5EC14161E774000064436 /* GHUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUnitTestMain.m; sourceTree = "<group>"; };
@@ -227,7 +223,6 @@
 			isa = PBXGroup;
 			children = (
 				4602AFDA161E3AA1003C9EAC /* Krush-Info.plist */,
-				4602AFDB161E3AA1003C9EAC /* InfoPlist.strings */,
 				4602AFDE161E3AA1003C9EAC /* Krush-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -349,7 +344,6 @@
 			children = (
 				46C5EC14161E774000064436 /* GHUnitTestMain.m */,
 				46C5EBE8161E746900064436 /* Tests-Info.plist */,
-				46C5EBE9161E746900064436 /* InfoPlist.strings */,
 				46C5EBEE161E746900064436 /* Tests-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -391,11 +385,12 @@
 /* Begin PBXLegacyTarget section */
 		46D872461640B46C004C113A /* Documentation */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "$(ACTION)";
+			buildArgumentsString = "--exit-threshold 4 --project-name $(PROJECT_NAME)  --project-company \"vslavik.github.com\" --company-id \"com.github.vslavik\"  -o . .\n";
 			buildConfigurationList = 46D872491640B46C004C113A /* Build configuration list for PBXLegacyTarget "Documentation" */;
 			buildPhases = (
 			);
-			buildToolPath = /usr/bin/make;
+			buildToolPath = /usr/local/bin/appledoc;
+			buildWorkingDirectory = "$(SRCROOT)/Krush";
 			dependencies = (
 			);
 			name = Documentation;
@@ -474,7 +469,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4602AFDD161E3AA1003C9EAC /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,7 +476,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46C5EBEB161E746900064436 /* InfoPlist.strings in Resources */,
 				4699B556163F391E00DE2608 /* test1 in Resources */,
 				467774571663340E004B1C18 /* test2 in Resources */,
 			);
@@ -538,25 +531,6 @@
 			targetProxy = 46716C65161E9367005E60E8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		4602AFDB161E3AA1003C9EAC /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4602AFDC161E3AA1003C9EAC /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		46C5EBE9161E746900064436 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				46C5EBEA161E746900064436 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4602AFE2161E3AA1003C9EAC /* Debug */ = {

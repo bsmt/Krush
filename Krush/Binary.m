@@ -5,6 +5,7 @@
 //
 
 #import "Binary.h"
+#import "MachO+Constants.h"
 
 @implementation Binary
 
@@ -15,7 +16,7 @@
 -(id)initWithBinaryAtPath:(NSString *)binPath
 {
     self = [super init];
-
+    
     if (self)
     {
         path = [NSURL fileURLWithPath:[binPath stringByExpandingTildeInPath]];
@@ -64,6 +65,19 @@
                 MachO *object = [MachO x86_64ObjectAtOffset:arch.offset inData:binary];
                 [machs addObject:object];
             }
+            else if (arch.cputype == CPU_TYPE_ARM) // object is ARM
+            {
+                MachO *object = [MachO ARMObjectAtOffset:arch.offset inData:binary];
+                
+                [machs addObject:object];
+            }
+            else if (arch.cputype == CPU_TYPE_ARM64) // object is ARM64
+            {
+                MachO *object = [MachO ARM64ObjectAtOffset:arch.offset inData:binary];
+                
+                [machs addObject:object];
+            }
+            
             offset += sizeof(struct fat_arch);
         }
     }

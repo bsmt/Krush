@@ -5,6 +5,7 @@
 //
 
 #import "MachO+Symbol.h"
+#import "MachO+Constants.h"
 
 @implementation MachO (Symbol)
 
@@ -47,6 +48,44 @@
                     continue;
                 }
                 symbols[name] = [NSNumber numberWithUnsignedLong:(unsigned long)nlist.value];
+            }
+        }
+        else if (self.arch == CPU_TYPE_ARM)
+        {
+            struct nlist nl;
+            nl = *(struct nlist *)([[self data] bytes] + nlistOff);
+            nlist32 *nlist = [[nlist32 alloc] initWithStruct:nl];
+            nlistOff += sizeof(struct nlist);
+            [[[self symtab] nlists] addObject:nlist];
+            
+            if (([nlist type] & N_TYPE) == N_SECT)
+            {
+                NSString *name = [[[self data] readTillNullAtOffset:(strOff + [nlist stringIndex] - 1)] toString];
+                if ([name rangeOfString:@"+"].location != NSNotFound || [name rangeOfString:@"-"].location != NSNotFound)
+                {
+                    // we skip objc info because it isn't always in the nlists
+                    continue;
+                }
+                symbols[name] = [NSNumber numberWithUnsignedLong:(unsigned long)nlist.value];
+            }
+        }
+        
+        else if (self.arch == CPU_TYPE_ARM64)
+        {
+            struct nlist_64 nl;
+            nl = *(struct nlist_64 *)([[self data] bytes] + nlistOff);
+            nlist64 *nlist = [[nlist64 alloc] initWithStruct:nl];
+            nlistOff += sizeof(struct nlist_64);
+            [[[self symtab] nlists] addObject:nlist];
+            
+            if (([nlist type] & N_TYPE) == N_SECT)
+            {
+                NSString *name = [[[self data] readTillNullAtOffset:(strOff + [nlist stringIndex] - 1)] toString];
+                if ([name rangeOfString:@"+"].location != NSNotFound || [name rangeOfString:@"-"].location != NSNotFound)
+                {
+                    continue;
+                }
+                symbols[name] = [NSNumber numberWithUnsignedLong:nlist.value];
             }
         }
         
@@ -111,7 +150,7 @@
             }
         }
     }
-
+    
     return [NSDictionary dictionaryWithDictionary:symbols];
 }
 
@@ -121,15 +160,15 @@
     {
         NSArray *modules = [ObjcModule modulesInMachO:self];
         NSArray *symtabs = [ObjcSymtab symtabsFromModuleList:modules inMachO:self];
-    
+        
         NSMutableArray *classes = [NSMutableArray array];
-    
+        
         for (ObjcSymtab *symtab in symtabs)
         {
             NSArray *temp_classes = [ObjcClass classesInMachO:self withSymtab:symtab];
             [classes addObjectsFromArray:temp_classes];
         }
-    
+        
         return [NSArray arrayWithArray:classes];
     }
     else if (self.arch == CPU_TYPE_X86_64)
@@ -148,6 +187,39 @@
         
         return [NSArray arrayWithArray:classes];
     }
+    else if (self.arch == CPU_TYPE_ARM64)
+    {
+        Section64 *class_list = [self section64:@"__objc_classlist" inSegment:@"__DATA"];
+        
+        NSMutableArray *classes = [NSMutableArray array];
+        
+        for (int i = 0; i < class_list.size; i += 8)
+        {
+            unsigned long pointer = [self.data littleEndianIntDataInRange:
+                                     NSMakeRange([self convertVirtualOffset:class_list.address] + i, 8)];
+            ObjcClass *class = [ObjcClass objc2ClassInMachO:self atVirtualOffset:pointer];
+            [classes addObject:class];
+        }
+        
+        return [NSArray arrayWithArray:classes];
+    }
+    
+    else if (self.arch == CPU_TYPE_ARM)
+    {
+        NSArray *modules = [ObjcModule modulesInMachO:self];
+        NSArray *symtabs = [ObjcSymtab symtabsFromModuleList:modules inMachO:self];
+        
+        NSMutableArray *classes = [NSMutableArray array];
+        
+        for (ObjcSymtab *symtab in symtabs)
+        {
+            NSArray *temp_classes = [ObjcClass classesInMachO:self withSymtab:symtab];
+            [classes addObjectsFromArray:temp_classes];
+        }
+        
+        return [NSArray arrayWithArray:classes];
+    }
+    
     else
     {
         return NULL;
@@ -186,7 +258,7 @@
         }
         
         return [NSArray arrayWithArray:cats];
-
+        
     }
     else
     {

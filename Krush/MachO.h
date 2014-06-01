@@ -61,7 +61,28 @@
  @see i386ObjectAtOffset:inData:
  */
 +(MachO *)x86_64ObjectAtOffset:(unsigned int)off inData:(NSData *)bin;
+/** Read a 32 bit MachO inside a binary.
+ 
+ For most other features to work, this needs to be called as opposed to init, as this finds all of the needed information.
+ 
+ @param off Offset at which the MachO begins in a binary.
+ @param bin The Binary data to look in.
+ @return A MachO with load commands and other information stored inside.
+ @see ARM64ObjectAtOffset:inData:
+ */
 
++(MachO *)ARMObjectAtOffset:(unsigned int)off inData:(NSData *)bin;
+/** Read a 64 bit MachO inside a binary.
+ 
+ For most other features to work, this needs to be called as opposed to init, as this finds all of the needed information.
+ 
+ @param off Offset at which the MachO begins in a binary.
+ @param bin The Binary data to look in.
+ @return A MachO with load commands and other information stored inside.
+ @see ARMObjectAtOffset:inData:
+ */
+
++(MachO *)ARM64ObjectAtOffset:(unsigned int)off inData:(NSData *)bin;
 
 /// @name Segments
 
@@ -72,7 +93,7 @@
  @see segment64WithName:
  @see section:inSegment:
  @see section64:inSegment:
-*/
+ */
 -(SegmentCommand *)segmentWithName:(NSString *)segname;
 
 /** Find a segment inside a 64 bit MachO.

@@ -10,7 +10,7 @@
 #define Krush_MachO_Constants_h
 
 #ifndef CPU_TYPE_ARM64
-# define CPU_TYPE_ARM64 (CPU_TYPE_ARM | CPU_ARCH_ABI64)
+#define CPU_TYPE_ARM64 (CPU_TYPE_ARM | CPU_ARCH_ABI64)
 #endif
 
 #ifndef CPU_TYPE_ARM

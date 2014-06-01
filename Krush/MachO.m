@@ -6,6 +6,7 @@
 
 #import "MachO.h"
 #import "MachO+Symbol.h"
+#import "MachO+Constants.h"
 
 @implementation MachO
 
@@ -28,13 +29,45 @@
     return self;
 }
 
++(MachO *)ARMObjectAtOffset:(unsigned int)off inData:(NSData *)bin
+{
+    MachO *mach = [[MachO alloc] init];
+    mach.data = bin;
+    mach.location = off;
+    unsigned int offset = off;
+    
+    mach.arch = CPU_TYPE_ARM;
+    mach.header = [Header headerInData:bin atOffset:offset];
+    offset += sizeof(struct mach_header);
+    
+    [Command parseLoadCommandsInMachO:mach atOffset:offset inData:bin];
+    
+    return mach;
+}
+
++(MachO *)ARM64ObjectAtOffset:(unsigned int)off inData:(NSData *)bin
+{
+    MachO *mach = [[MachO alloc] init];
+    mach.data = bin;
+    mach.location = off;
+    unsigned int offset = off;
+    
+    mach.arch = CPU_TYPE_ARM64;
+    mach.header = [Header headerInData:bin atOffset:offset];
+    offset += sizeof(struct mach_header_64);
+    
+    [Command parseLoadCommandsInMachO:mach atOffset:offset inData:bin];
+    
+    return mach;
+}
+
 +(MachO *)i386ObjectAtOffset:(unsigned int)off inData:(NSData *)bin
 {
     MachO *mach = [[MachO alloc] init];
     mach.data = bin;
     mach.location = off;
     unsigned int offset = off;
-
+    
     mach.arch = CPU_TYPE_I386;
     mach.header = [Header headerInData:bin atOffset:offset];
     offset += sizeof(struct mach_header);
@@ -113,7 +146,7 @@
     unsigned long base = location;
     unsigned long section_offset;
     unsigned long vmaddr;
-
+    
     if (arch == CPU_TYPE_I386)
     {
         SegmentCommand *seg = [self segmentWithName:@"__TEXT"];
@@ -150,6 +183,44 @@
         
         return (unsigned long)(base + section_offset + virtual - vmaddr);
     }
+    else if (arch == CPU_TYPE_ARM64)
+    {
+        SegmentCommand64 *seg = [self segment64WithName:@"__TEXT"];
+        if (!seg)
+        {
+            return 0;
+        }
+        Section64 *sect = [seg section64WithName:@"__text"];
+        if (!sect)
+        {
+            return 0;
+        }
+        
+        vmaddr = (unsigned long)[sect address];
+        section_offset = [sect offset];
+        
+        return (unsigned long)(base + section_offset + virtual - vmaddr);
+    }
+    
+    else if (arch == CPU_TYPE_ARM)
+    {
+        SegmentCommand *seg = [self segmentWithName:@"__TEXT"];
+        if (!seg)
+        {
+            return 0;
+        }
+        Section *sect = [seg sectionWithName:@"__text"];
+        if (!sect)
+        {
+            return 0;
+        }
+        
+        vmaddr = [sect address];
+        section_offset = [sect offset];
+        
+        return (unsigned long)(base + section_offset + virtual - vmaddr);
+    }
+    
     else
     {
         return 0;
@@ -199,6 +270,44 @@
         
         return (unsigned long)(real - base - section_offset + vmaddr);
     }
+    else if (arch == CPU_TYPE_ARM64)
+    {
+        SegmentCommand64 *seg = [self segment64WithName:@"__TEXT"];
+        if (!seg)
+        {
+            return 0;
+        }
+        Section64 *sect = [seg section64WithName:@"__text"];
+        if (!sect)
+        {
+            return 0;
+        }
+        
+        vmaddr = (unsigned long)[sect address];
+        section_offset = [sect offset];
+        
+        return (unsigned long)(real - base - section_offset + vmaddr);
+    }
+    
+    else if (arch == CPU_TYPE_ARM)
+    {
+        SegmentCommand *seg = [self segmentWithName:@"__TEXT"];
+        if (!seg)
+        {
+            return 0;
+        }
+        Section *sect = [seg sectionWithName:@"__text"];
+        if (!sect)
+        {
+            return 0;
+        }
+        
+        vmaddr = [sect address];
+        section_offset = [sect offset];
+        
+        return (unsigned long)(real - base - section_offset + vmaddr);
+    }
+    
     else
     {
         return 0;

@@ -146,6 +146,7 @@
 		46C5EBEE161E746900064436 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		46C5EBFC161E74A800064436 /* GHUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnit.framework; path = Tests/GHUnit.framework; sourceTree = "<group>"; };
 		46C5EC14161E774000064436 /* GHUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUnitTestMain.m; sourceTree = "<group>"; };
+		B120400E193BD4390032339A /* MachO+Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MachO+Constants.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +309,7 @@
 				4602B03B161E3B03003C9EAC /* ObjC */,
 				4602B035161E3ABD003C9EAC /* Patcher */,
 				4602AFF5161E3AB3003C9EAC /* MachO.h */,
+				B120400E193BD4390032339A /* MachO+Constants.h */,
 				4602AFF6161E3AB3003C9EAC /* MachO.m */,
 				4602AFE9161E3AB3003C9EAC /* Binary.h */,
 				4602AFEA161E3AB3003C9EAC /* Binary.m */,

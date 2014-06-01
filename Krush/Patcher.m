@@ -5,6 +5,7 @@
 //
 
 #import "Patcher.h"
+#import "MachO+Constants.h"
 
 @implementation Patcher
 
@@ -37,7 +38,7 @@
     NSError *error = NULL;
     NSFileHandle *handle = [NSFileHandle fileHandleForWritingToURL:[binary path]
                                                              error:&error];
-
+    
     for (MachO *mach in [[self binary] machs])
     {
         NSDictionary *symbols = [mach findAllSymbols];
@@ -112,10 +113,14 @@
             commandEnd += sizeof(struct mach_header_64);
         else if ([i arch] == CPU_TYPE_X86)
             commandEnd += sizeof(struct mach_header);
+        else if ([i arch] == CPU_TYPE_ARM)
+            commandEnd += sizeof(struct mach_header);
+        else if ([i arch] == CPU_TYPE_ARM64)
+            commandEnd += sizeof(struct mach_header_64);
         
         // check if data we are replacing is null
         NSData *occupant = [[i data] subdataWithRange:NSMakeRange(commandEnd,
-                                                             neededLength)];
+                                                                  neededLength)];
         if(strcmp([occupant bytes], "\0"))
             return FALSE;
         
@@ -127,7 +132,15 @@
         dylib.current_version = 0;
         dylib.compatibility_version = 0;
         command.cmd = LC_LOAD_DYLIB;
-        command.cmdsize = neededLength + (8 - (neededLength % 8)); // pad to multiple of 8
+        
+        if ([i arch] == CPU_TYPE_ARM) {
+            command.cmdsize = neededLength + (4 - (neededLength % 4)); // pad to multiple of 4
+        }  else if ([i arch] == CPU_TYPE_ARM64) {
+            command.cmdsize = neededLength + (8 - (neededLength % 8)); // pad to multiple of 8
+        } else {
+            command.cmdsize = neededLength + (8 - (neededLength % 8)); // pad to multiple of 8
+        }
+        
         command.dylib = dylib;
         
         // write data
@@ -147,7 +160,15 @@
         // change sizeofcmds
         [handle seekToFileOffset:[i location] + 20]; // sixth item in struct
         unsigned int new_size = [[i header] sizeofcmds] + neededLength;
-        new_size += (8 - (new_size % 8)); // pad to a multiple of 8
+        
+        if ([i arch] == CPU_TYPE_ARM) {
+            new_size += (4 - (new_size % 4)); // pad to a multiple of 4
+        }  else if ([i arch] == CPU_TYPE_ARM64) {
+            new_size += (8 - (new_size % 8)); // pad to a multiple of 8
+        } else {
+            new_size += (8 - (new_size % 8)); // pad to a multiple of 8
+        }
+        
         [handle writeData:[NSData dataWithBytes:&new_size length:4]];
         [handle closeFile];
     }
